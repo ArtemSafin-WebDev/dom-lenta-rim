@@ -1,0 +1,30 @@
+<section class="dom-lenta-audience">
+  <div class="dom-lenta-container">
+    <div class="dom-lenta-audience__header">
+      <p class="dom-lenta-audience__label">{{audience.label}}</p>
+      <h2 class="dom-lenta-audience__title">{{{audience.titleHtml}}}</h2>
+    </div>
+
+    <div class="dom-lenta-audience__content">
+      <ul class="dom-lenta-audience__stats-list" aria-label="{{audience.listAriaLabel}}">
+        {{#each audience.stats}}
+        <li class="dom-lenta-audience__stats-item">
+          <p class="dom-lenta-audience__stats-value">{{value}}</p>
+          <p class="dom-lenta-audience__stats-text">{{{text}}}</p>
+        </li>
+        {{/each}}
+      </ul>
+
+      <article class="dom-lenta-audience__card">
+        <div class="dom-lenta-audience__card-media">
+          <img class="dom-lenta-audience__card-image" src="{{audience.card.image.src}}"
+            alt="{{audience.card.image.alt}}" width="672" height="768" loading="lazy" decoding="async" />
+        </div>
+
+        <button class="dom-lenta-audience__card-button" type="button">
+          {{audience.card.buttonText}}
+        </button>
+      </article>
+    </div>
+  </div>
+</section>
