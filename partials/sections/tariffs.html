@@ -1,0 +1,14 @@
+<section class="dom-lenta-tariffs">
+  <div class="dom-lenta-container">
+    <div class="dom-lenta-tariffs__header">
+      <p class="dom-lenta-tariffs__label">{{tariffs.label}}</p>
+      <h2 class="dom-lenta-tariffs__title">{{{tariffs.titleHtml}}}</h2>
+    </div>
+
+    <ol class="dom-lenta-tariffs__list" aria-label="{{tariffs.listAriaLabel}}">
+      {{#each tariffs.cards}}
+      {{> components/cards/tariff-card card=this buttonText=../tariffs.buttonText }}
+      {{/each}}
+    </ol>
+  </div>
+</section>

@@ -1,0 +1,154 @@
+@layer sections {
+  .dom-lenta-tariffs {
+    margin-bottom: 15rem;
+  }
+
+  .dom-lenta-tariffs__header {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3rem;
+    align-items: start;
+    margin-bottom: 5rem;
+  }
+
+  .dom-lenta-tariffs__label {
+    grid-column: 1 / 2;
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .dom-lenta-tariffs__title {
+    grid-column: 2 / -1;
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 1;
+    text-wrap: balance;
+  }
+
+  .dom-lenta-tariffs__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3rem;
+    align-items: stretch;
+    counter-reset: dom-lenta-tariff-card;
+  }
+
+  .dom-lenta-tariffs__item {
+    grid-row: span 5;
+    display: grid;
+    grid-template-rows: subgrid;
+    counter-increment: dom-lenta-tariff-card;
+  }
+
+  .dom-lenta-tariffs__card {
+    grid-row: span 5;
+    display: grid;
+    grid-template-rows: subgrid;
+
+    padding-top: 3.7rem;
+    background-color: rgba(8, 18, 44, 0.05);
+    border-radius: 3.5rem;
+    overflow: visible;
+    gap: 2rem;
+  }
+
+  .dom-lenta-tariffs__card-number,
+  .dom-lenta-tariffs__card-title,
+  .dom-lenta-tariffs__card-description,
+  .dom-lenta-tariffs__features {
+    padding-inline: 4.5rem;
+  }
+
+  .dom-lenta-tariffs__card-number {
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #777778;
+
+    &::before {
+      content: counter(dom-lenta-tariff-card, decimal-leading-zero) "/";
+    }
+  }
+
+  .dom-lenta-tariffs__card-title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--dom-lenta-orange-color);
+    margin-bottom: 1rem;
+  }
+
+  .dom-lenta-tariffs__card-description {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.1;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+  }
+
+  .dom-lenta-tariffs__features {
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 4rem;
+  }
+
+  .dom-lenta-tariffs__feature {
+    position: relative;
+    padding-left: 1.7rem;
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--dom-lenta-dark-blue-color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.9rem;
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 50%;
+      background-color: var(--dom-lenta-orange-color);
+    }
+  }
+
+  .dom-lenta-tariffs__card-button {
+    padding: 2.3rem 2rem;
+    border-radius: 2rem;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    background-color: var(--dom-lenta-dark-blue-color);
+    transition:
+      background-color 0.2s,
+      color 0.2s;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: var(--dom-lenta-orange-color);
+      }
+    }
+  }
+
+  @supports not (grid-template-rows: subgrid) {
+    .dom-lenta-tariffs__item {
+      grid-row: auto;
+      grid-template-rows: auto auto auto minmax(0, 1fr) auto;
+    }
+
+    .dom-lenta-tariffs__card {
+      grid-row: span 5;
+      grid-template-rows: auto auto auto minmax(0, 1fr) auto;
+      gap: 3rem;
+    }
+  }
+}

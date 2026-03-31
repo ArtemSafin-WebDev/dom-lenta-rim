@@ -1,0 +1,15 @@
+<li class="dom-lenta-tariffs__item">
+  <article class="dom-lenta-tariffs__card">
+    <p class="dom-lenta-tariffs__card-number" aria-hidden="true"></p>
+    <h3 class="dom-lenta-tariffs__card-title">{{{card.titleHtml}}}</h3>
+    <p class="dom-lenta-tariffs__card-description">{{{card.descriptionHtml}}}</p>
+
+    <ul class="dom-lenta-tariffs__features" aria-label="{{card.featuresAriaLabel}}">
+      {{#each card.features}}
+      <li class="dom-lenta-tariffs__feature">{{{this}}}</li>
+      {{/each}}
+    </ul>
+
+    <button class="dom-lenta-tariffs__card-button" type="button">{{buttonText}}</button>
+  </article>
+</li>
