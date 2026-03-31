@@ -1,0 +1,33 @@
+<section class="dom-lenta-feedback">
+  <div class="dom-lenta-feedback__inner">
+    <div class="dom-lenta-container">
+      <div class="dom-lenta-feedback__header">
+        <p class="dom-lenta-feedback__label">{{feedbackForm.label}}</p>
+
+        <div class="dom-lenta-feedback__header-content">
+          <h2 class="dom-lenta-feedback__title">{{{feedbackForm.titleHtml}}}</h2>
+          <p class="dom-lenta-feedback__description">{{{feedbackForm.descriptionHtml}}}</p>
+        </div>
+      </div>
+
+      <form class="dom-lenta-feedback__form" action="{{feedbackForm.formAction}}" method="post"
+        aria-label="{{feedbackForm.formAriaLabel}}">
+        <div class="dom-lenta-feedback__field">
+          <div class="dom-lenta-feedback__field-wrap">
+            <input class="dom-lenta-feedback__input dom-lenta-feedback__control" type="text" name="name"
+              placeholder="{{feedbackForm.namePlaceholder}}" autocomplete="name" required />
+          </div>
+        </div>
+
+        <div class="dom-lenta-feedback__field">
+          <div class="dom-lenta-feedback__field-wrap">
+            <input class="dom-lenta-feedback__input dom-lenta-feedback__control" type="tel" name="phone"
+              placeholder="{{feedbackForm.phonePlaceholder}}" autocomplete="tel" required />
+          </div>
+        </div>
+
+        <button class="dom-lenta-feedback__submit" type="submit">{{feedbackForm.buttonText}}</button>
+      </form>
+    </div>
+  </div>
+</section>

@@ -94,5 +94,17 @@ export default {
         },
       ],
     },
+    feedbackForm: {
+      label: "ФОРМА",
+      titleHtml:
+        "Эффективный охват, долгий контакт<br>и готовые к покупке клиенты —<br>всё в одном решении",
+      descriptionHtml:
+        "Заполните короткую форму и&nbsp;получите бесплатный расчет стоимости<br>размещения рекламы на&nbsp;экранах&nbsp;в&nbsp;гипермаркетах «Дом Лента»",
+      formAriaLabel: "Форма обратной связи Дом Лента",
+      formAction: "/",
+      namePlaceholder: "[ Имя ]",
+      phonePlaceholder: "[ 8-000-000-000 ]",
+      buttonText: "ОТПРАВИТЬ",
+    },
   },
 };
