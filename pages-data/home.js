@@ -140,5 +140,43 @@ export default {
         alt: "Покупатели и рекламный экран в гипермаркете Дом Лента",
       },
     },
+    footer: {
+      navigationColumns: [
+        {
+          ariaLabel: "Навигация по разделам",
+          links: [
+            { text: "Главная", href: "/" },
+            { text: "Новости", href: "#" },
+            { text: "География", href: "#" },
+            { text: "Услуги", href: "#" },
+          ],
+        },
+        {
+          ariaLabel: "Навигация по компании",
+          links: [
+            { text: "О компании", href: "#" },
+            { text: "Контакты", href: "#" },
+            { text: "Города присутствия", href: "#" },
+          ],
+        },
+      ],
+      socialLinks: [
+        {
+          href: "https://vk.com",
+          label: "Вконтакте",
+          iconId: "vk",
+          viewBox: "0 0 52 34",
+        },
+        {
+          href: "https://t.me",
+          label: "Телеграм",
+          iconId: "tg",
+          viewBox: "0 0 41 35",
+        },
+      ],
+      phone: "8 800 551-35-03",
+      phoneHref: "tel:88005513503",
+      copyright: "© 2026 Медиагруппа РИМ",
+    },
   },
 };

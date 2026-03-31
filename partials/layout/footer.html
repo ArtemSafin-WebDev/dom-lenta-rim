@@ -1,5 +1,36 @@
-<footer class="page-footer">
-    <div class="dom-lenta-container">
+<footer class="page-footer dom-lenta-footer">
+  <div class="dom-lenta-container">
+    <div class="dom-lenta-footer__inner">
+      <div class="dom-lenta-footer__navigation">
+        {{#each footer.navigationColumns}}
+        <nav class="dom-lenta-footer__nav" aria-label="{{ariaLabel}}">
+          <ul class="dom-lenta-footer__nav-list">
+            {{#each links}}
+            <li class="dom-lenta-footer__nav-item">
+              <a class="dom-lenta-footer__nav-link" href="{{href}}">{{text}}</a>
+            </li>
+            {{/each}}
+          </ul>
+        </nav>
+        {{/each}}
+      </div>
 
+      <div class="dom-lenta-footer__contacts">
+        <ul class="dom-lenta-footer__socials" aria-label="Социальные сети">
+          {{#each footer.socialLinks}}
+          <li class="dom-lenta-footer__social-item">
+            <a class="dom-lenta-footer__social-link" href="{{href}}" aria-label="{{label}}" target="_blank" rel="noreferrer noopener">
+              <svg class="dom-lenta-footer__social-icon" viewBox="{{viewBox}}" aria-hidden="true">
+                <use href="#{{iconId}}"></use>
+              </svg>
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+
+        <a class="dom-lenta-footer__phone" href="{{footer.phoneHref}}">{{footer.phone}}</a>
+        <p class="dom-lenta-footer__copyright">{{footer.copyright}}</p>
+      </div>
     </div>
+  </div>
 </footer>
