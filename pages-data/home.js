@@ -107,5 +107,38 @@ export default {
       buttonTextDesktop: "Отправить",
       buttonTextMobile: "Оставить заявку",
     },
+    management: {
+      label: "УПРАВЛЕНИЕ",
+      titleHtml: "Управляйте рекламной кампанией<br>легко и гибко",
+      descriptionHtml:
+        "Тестируйте, оптимизируйте и&nbsp;управляйте продвижением в&nbsp;реальном времени!",
+      listAriaLabel: "Возможности управления рекламной кампанией",
+      items: [
+        {
+          titleHtml: "Решения<br>для разных задач",
+          descriptionHtml:
+            "Срок рекламной кампании&nbsp;&mdash; от&nbsp;1&nbsp;дня, запуск по&nbsp;всей&nbsp;РФ или&nbsp;в&nbsp;отдельных гипермаркетах",
+        },
+        {
+          titleHtml: "Таргетинг<br>по времени",
+          descriptionHtml: "Выбирайте конкретные дни недели и&nbsp;часы показа",
+        },
+        {
+          titleHtml: "Быстрый<br>запуск",
+          descriptionHtml:
+            "Ваша рекламная кампания может стартовать всего<br> за&nbsp;7&nbsp;дней",
+        },
+        {
+          titleHtml: "Смена<br>креативов",
+          descriptionHtml: "Оперативно меняйте<br> рекламные сообщения",
+        },
+      ],
+      primaryButtonText: "ОСТАВИТЬ ЗАЯВКУ",
+      secondaryButtonText: "ПРЕЗЕНТАЦИЯ",
+      image: {
+        src: "/images/dom-lenta-management/frame-1.webp",
+        alt: "Покупатели и рекламный экран в гипермаркете Дом Лента",
+      },
+    },
   },
 };

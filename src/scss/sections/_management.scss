@@ -1,0 +1,162 @@
+@layer sections {
+  .dom-lenta-management {
+    margin-bottom: 15rem;
+  }
+
+  .dom-lenta-management__header {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    align-items: start;
+    margin-bottom: 8rem;
+  }
+
+  .dom-lenta-management__label {
+    grid-column: 1 / 2;
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .dom-lenta-management__header-content {
+    grid-column: 2 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .dom-lenta-management__title {
+    font-size: 4.9rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-wrap: balance;
+  }
+
+  .dom-lenta-management__description {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #000;
+    max-width: 50ch;
+  }
+
+  .dom-lenta-management__body {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: 1fr auto;
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  .dom-lenta-management__list {
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4rem 2rem;
+    counter-reset: dom-lenta-management-item;
+    align-content: flex-start;
+  }
+
+  .dom-lenta-management__item {
+    counter-increment: dom-lenta-management-item;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: 3.4rem;
+    align-items: start;
+    row-gap: 2.4rem;
+    align-content: flex-start;
+
+    &::before {
+      content: counter(dom-lenta-management-item, decimal-leading-zero) "/";
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: 1;
+      color: rgba(0, 0, 0, 0.6);
+      grid-row: 1 / 3;
+      align-self: flex-start;
+    }
+  }
+
+  .dom-lenta-management__item-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--dom-lenta-dark-blue-color);
+  }
+
+  .dom-lenta-management__item-description {
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 1.1;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .dom-lenta-management__media {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    border-radius: 3.5rem;
+    overflow: clip;
+    background-color: #4c4c4c;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      padding-bottom: 128%;
+    }
+  }
+
+  .dom-lenta-management__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .dom-lenta-management__actions {
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .dom-lenta-management__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 2rem;
+    padding: 2.3rem 2rem;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #fff;
+    transition:
+      background-color 0.2s,
+      color 0.2s;
+  }
+
+  .dom-lenta-management__button--primary {
+    background-color: var(--dom-lenta-orange-color);
+  }
+
+  .dom-lenta-management__button--secondary {
+    background-color: var(--dom-lenta-dark-blue-color);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .dom-lenta-management__button--primary:hover {
+      background-color: var(--dom-lenta-dark-blue-color);
+    }
+
+    .dom-lenta-management__button--secondary:hover {
+      background-color: var(--dom-lenta-orange-color);
+    }
+  }
+}

@@ -1,0 +1,37 @@
+<section class="dom-lenta-management">
+  <div class="dom-lenta-container">
+    <div class="dom-lenta-management__header">
+      <p class="dom-lenta-management__label">{{management.label}}</p>
+
+      <div class="dom-lenta-management__header-content">
+        <h2 class="dom-lenta-management__title">{{{management.titleHtml}}}</h2>
+        <p class="dom-lenta-management__description">{{{management.descriptionHtml}}}</p>
+      </div>
+    </div>
+
+    <div class="dom-lenta-management__body">
+      <ol class="dom-lenta-management__list" aria-label="{{management.listAriaLabel}}">
+        {{#each management.items}}
+        <li class="dom-lenta-management__item">
+          <h3 class="dom-lenta-management__item-title">{{{this.titleHtml}}}</h3>
+          <p class="dom-lenta-management__item-description">{{{this.descriptionHtml}}}</p>
+        </li>
+        {{/each}}
+      </ol>
+
+      <div class="dom-lenta-management__media">
+        <img class="dom-lenta-management__image" src="{{management.image.src}}" alt="{{management.image.alt}}" width="444" height="570"
+          loading="lazy" decoding="async" />
+      </div>
+
+      <div class="dom-lenta-management__actions">
+        <button class="dom-lenta-management__button dom-lenta-management__button--primary" type="button">
+          {{management.primaryButtonText}}
+        </button>
+        <button class="dom-lenta-management__button dom-lenta-management__button--secondary" type="button">
+          {{management.secondaryButtonText}}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
