@@ -1,6 +1,12 @@
+@use "../tools/media" as mq;
+
 @layer sections {
   .dom-lenta-audience {
     margin-bottom: 15rem;
+
+    @include mq.down(sm) {
+      margin-bottom: 5rem;
+    }
   }
 
   .dom-lenta-audience__header {
@@ -9,6 +15,12 @@
     column-gap: 2.8rem;
     align-items: start;
     margin-bottom: 5rem;
+
+    @include mq.down(sm) {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 3rem;
+    }
   }
 
   .dom-lenta-audience__label {
@@ -16,6 +28,14 @@
     font-weight: 400;
     line-height: 1.4;
     text-transform: uppercase;
+
+    @include mq.down(sm) {
+      order: 1;
+      margin-left: auto;
+      font-size: 1rem;
+      line-height: 1;
+      text-align: right;
+    }
   }
 
   .dom-lenta-audience__title {
@@ -23,6 +43,13 @@
     font-size: 4.8rem;
     font-weight: 700;
     line-height: 1;
+
+    @include mq.down(sm) {
+      order: 2;
+      margin-top: 1.5rem;
+      font-size: 3.5rem;
+      text-wrap: initial;
+    }
   }
 
   .dom-lenta-audience__content {
@@ -30,12 +57,25 @@
     grid-template-columns: minmax(0, 1fr) minmax(0, 42rem);
     column-gap: 4rem;
     align-items: stretch;
+
+    @include mq.down(sm) {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 
   .dom-lenta-audience__stats-list {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     align-content: flex-start;
+
+    @include mq.down(sm) {
+      order: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
   }
 
   .dom-lenta-audience__stats-item {
@@ -46,11 +86,25 @@
     align-items: center;
     padding-block: 3.2rem;
     border-bottom: 1px solid rgba(30, 30, 30, 0.45);
+
+    @include mq.down(sm) {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: flex-start;
+      padding-block: 0 2.5rem;
+      border-bottom-color: rgba(30, 30, 30, 0.6);
+    }
   }
 
   .dom-lenta-audience__stats-item:last-child {
     border-bottom: none;
     padding-bottom: 0;
+
+    @include mq.down(sm) {
+      border-bottom: 1px solid rgba(30, 30, 30, 0.6);
+      padding-bottom: 2.5rem;
+    }
   }
 
   .dom-lenta-audience__stats-value {
@@ -61,6 +115,12 @@
     color: var(--dom-lenta-orange-color);
     white-space: nowrap;
     justify-self: flex-end;
+
+    @include mq.down(sm) {
+      font-size: 11rem;
+      line-height: 0.72;
+      justify-self: flex-start;
+    }
   }
 
   .dom-lenta-audience__stats-text {
@@ -73,6 +133,16 @@
       color: var(--dom-lenta-orange-color);
       font-weight: inherit;
     }
+
+    @include mq.down(sm) {
+      max-width: 30ch;
+      align-self: flex-start;
+      font-size: 1.6rem;
+
+      br {
+        display: none;
+      }
+    }
   }
 
   .dom-lenta-audience__card {
@@ -84,6 +154,15 @@
       grid-column: 1 / -1;
       grid-row: 1 / 2;
     }
+
+    @include mq.down(sm) {
+      order: 2;
+      display: block;
+
+      &::before {
+        display: none;
+      }
+    }
   }
 
   .dom-lenta-audience__card-media {
@@ -94,6 +173,10 @@
     border-radius: 3.5rem;
     overflow: clip;
     background-color: #dedede;
+
+    @include mq.down(sm) {
+      display: none;
+    }
   }
 
   .dom-lenta-audience__card-image {
@@ -123,6 +206,16 @@
     transition:
       background-color 0.2s,
       color 0.2s;
+
+    @include mq.down(sm) {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 16.2rem;
+      padding: 1.2rem 2.4rem;
+      border-radius: 0.86rem;
+      font-size: 1.6rem;
+    }
   }
 
   @supports not (grid-template-columns: subgrid) {
