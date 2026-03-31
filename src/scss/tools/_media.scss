@@ -1,0 +1,48 @@
+@use "sass:map";
+@use "sass:meta";
+
+$breakpoints: (
+  xs: 360px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+) !default;
+
+@function bp($point) {
+  @if map.has-key($breakpoints, $point) {
+    @return map.get($breakpoints, $point);
+  }
+
+  @if meta.type-of($point) == number {
+    @return $point;
+  }
+
+  @error "Unknown breakpoint `#{$point}`. Use one of: #{map.keys($breakpoints)} or pass a length value.";
+}
+
+@mixin up($from) {
+  @media (width > bp($from)) {
+    @content;
+  }
+}
+
+@mixin down($to) {
+  @media (width <= bp($to)) {
+    @content;
+  }
+}
+
+@mixin between($from, $to) {
+  $min-width: bp($from);
+  $max-width: bp($to);
+
+  @if $min-width > $max-width {
+    @error "`between(#{$from}, #{$to})` is invalid: min breakpoint is greater than max breakpoint.";
+  }
+
+  @media (width > $min-width) and (width <= $max-width) {
+    @content;
+  }
+}

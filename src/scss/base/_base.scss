@@ -1,0 +1,39 @@
+@use "tools/media" as mq;
+
+@layer base {
+  html {
+    font-size: 62.5%;
+    -webkit-font-smoothing: antialiased;
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
+
+    @include mq.down(sm) {
+      font-size: 10px;
+    }
+  }
+
+  body {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overscroll-behavior: none;
+    font-family: var(--uni-neue);
+    color: var(--dom-lenta-dark-blue-color);
+    background-color: var(--dom-lenta-bg-color);
+  }
+
+  :where(a, button) {
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s;
+  }
+
+  ::selection {
+    color: white;
+    background-color: var(--dom-lenta-orange-color);
+    -webkit-text-fill-color: white;
+  }
+}
