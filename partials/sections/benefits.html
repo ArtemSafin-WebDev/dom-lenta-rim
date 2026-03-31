@@ -1,0 +1,31 @@
+<section class="dom-lenta-benefits">
+  <div class="dom-lenta-container">
+    <div class="dom-lenta-benefits__header">
+      <p class="dom-lenta-benefits__label">{{benefits.label}}</p>
+
+      <div class="dom-lenta-benefits__header-content">
+        <h2 class="dom-lenta-benefits__title">{{{benefits.titleHtml}}}</h2>
+        <p class="dom-lenta-benefits__description">{{{benefits.descriptionHtml}}}</p>
+      </div>
+    </div>
+
+    <div class="dom-lenta-benefits__body">
+      <div class="dom-lenta-benefits__media">
+        <img class="dom-lenta-benefits__image" src="{{benefits.image.src}}" alt="{{benefits.image.alt}}" width="882" height="522"
+          loading="lazy" decoding="async" />
+      </div>
+
+      <div class="dom-lenta-benefits__side">
+        <ol class="dom-lenta-benefits__list" aria-label="{{benefits.listAriaLabel}}">
+          {{#each benefits.items}}
+          <li class="dom-lenta-benefits__item">
+            <p class="dom-lenta-benefits__item-text">{{{this}}}</p>
+          </li>
+          {{/each}}
+        </ol>
+
+        <button class="dom-lenta-benefits__button" type="button">{{benefits.buttonText}}</button>
+      </div>
+    </div>
+  </div>
+</section>

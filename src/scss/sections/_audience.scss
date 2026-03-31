@@ -11,8 +11,8 @@
 
   .dom-lenta-audience__header {
     display: grid;
-    grid-template-columns: minmax(0, 42.6rem) minmax(0, 1fr);
-    column-gap: 2.8rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 3rem;
     align-items: start;
     margin-bottom: 5rem;
 
@@ -28,6 +28,7 @@
     font-weight: 400;
     line-height: 1.4;
     text-transform: uppercase;
+    grid-column: 1 / 2;
 
     @include mq.down(sm) {
       order: 1;
@@ -43,6 +44,7 @@
     font-size: 4.8rem;
     font-weight: 700;
     line-height: 1;
+    grid-column: 2 / -1;
 
     @include mq.down(sm) {
       order: 2;
