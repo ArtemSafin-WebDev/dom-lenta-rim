@@ -104,7 +104,8 @@ export default {
       formAction: "/",
       namePlaceholder: "[ Имя ]",
       phonePlaceholder: "[ 8-000-000-000 ]",
-      buttonText: "ОТПРАВИТЬ",
+      buttonTextDesktop: "Отправить",
+      buttonTextMobile: "Оставить заявку",
     },
   },
 };

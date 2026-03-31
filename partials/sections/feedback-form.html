@@ -26,7 +26,14 @@
           </div>
         </div>
 
-        <button class="dom-lenta-feedback__submit" type="submit">{{feedbackForm.buttonText}}</button>
+        <button class="dom-lenta-feedback__submit" type="submit">
+          <span class="dom-lenta-feedback__submit-text dom-lenta-feedback__submit-text--desktop">
+            {{feedbackForm.buttonTextDesktop}}
+          </span>
+          <span class="dom-lenta-feedback__submit-text dom-lenta-feedback__submit-text--mobile">
+            {{feedbackForm.buttonTextMobile}}
+          </span>
+        </button>
       </form>
     </div>
   </div>
