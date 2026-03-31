@@ -2,8 +2,11 @@
   <div class="dom-lenta-container">
     <div class="dom-lenta-hero__inner">
       <div class="dom-lenta-hero__background">
-        <img class="dom-lenta-hero__background-image" src="/images/dom-lenta-hero/background.webp" alt="" width="3040"
-          height="1568" loading="eager" fetchpriority="high" decoding="async" />
+        <picture>
+          <source media="(max-width: 576px)" srcset="/images/dom-lenta-hero/background-mobile.webp" />
+          <img class="dom-lenta-hero__background-image" src="/images/dom-lenta-hero/background.webp" alt="" width="3040"
+            height="1568" loading="eager" fetchpriority="high" decoding="async" />
+        </picture>
       </div>
 
 
