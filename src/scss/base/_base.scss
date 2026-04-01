@@ -7,6 +7,8 @@
     scrollbar-gutter: stable;
     scroll-behavior: smooth;
 
+    font-size: clamp(4px, 0.695vw, 200px);
+
     @include mq.down(sm) {
       font-size: 10px;
     }
