@@ -1,12 +1,10 @@
 @use "tools/media" as mq;
 
-@layer tokens {
-  :root {
-    --container-padding: 5rem;
-    --container-max-width: 134rem;
+:root {
+  --dom-lenta-container-padding: 5rem;
+  --dom-lenta-container-max-width: 134rem;
 
-    @include mq.down(sm) {
-      --container-padding: 1.2rem;
-    }
+  @include mq.down(sm) {
+    --dom-lenta-container-padding: 1.2rem;
   }
 }

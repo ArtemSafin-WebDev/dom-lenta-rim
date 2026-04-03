@@ -1,119 +1,118 @@
 @use "../tools/media" as mq;
 
-@layer layout {
-  .dom-lenta-footer {
-    margin-top: auto;
-    color: #f8f8f8;
-    background-color: var(--dom-lenta-dark-blue-color);
-  }
+.dom-lenta-footer {
+  margin-top: auto;
+  color: #f8f8f8;
+  background-color: var(--dom-lenta-dark-blue-color);
+}
 
-  .dom-lenta-footer__inner {
-    display: flex;
-    justify-content: space-between;
-    gap: 6rem;
-    padding-top: 6.7rem;
-    padding-bottom: 7.4rem;
+.dom-lenta-footer__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 6rem;
+  padding-top: 6.7rem;
+  padding-bottom: 7.4rem;
 
-    @include mq.down(sm) {
-      gap: 3.3rem;
-      padding-top: 2rem;
-      padding-bottom: 2.8rem;
-    }
-  }
-
-  .dom-lenta-footer__navigation {
-    display: flex;
-    gap: 7.7rem;
-
-    @include mq.down(sm) {
-      gap: 3.1rem;
-    }
-  }
-
-  .dom-lenta-footer__nav-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2.1rem;
-
-    @include mq.down(sm) {
-      gap: 1.2rem;
-    }
-  }
-
-  .dom-lenta-footer__nav-link {
-    display: block;
-  }
-
-  .dom-lenta-footer__nav-link,
-  .dom-lenta-footer__phone,
-  .dom-lenta-footer__copyright {
-    font-size: 2.05rem;
-    font-weight: 400;
-    line-height: 1;
-
-    @include mq.down(sm) {
-      font-size: 1.2rem;
-      line-height: 1;
-    }
-  }
-
-  .dom-lenta-footer__nav-link,
-  .dom-lenta-footer__phone,
-  .dom-lenta-footer__social-link {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .dom-lenta-footer__contacts {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 3.2rem;
-
-    @include mq.down(sm) {
-      gap: 1.2rem;
-    }
-  }
-
-  .dom-lenta-footer__socials {
-    display: flex;
-    align-items: center;
-    gap: 1.3rem;
-
-    @include mq.down(sm) {
-      gap: 0.75rem;
-      margin-bottom: 1.7rem;
-    }
-  }
-
-  .dom-lenta-footer__social-icon {
-    display: block;
-    inline-size: auto;
-    block-size: 3.4rem;
-    flex: none;
-    fill: currentColor;
-
-    @include mq.down(sm) {
-      block-size: 1.97rem;
-    }
-  }
-
-  .dom-lenta-footer__nav:nth-child(2) {
-    @include mq.down(sm) {
-      inline-size: 6.8rem;
-    }
-  }
-
-  .dom-lenta-footer__phone,
-  .dom-lenta-footer__copyright {
-    @include mq.down(sm) {
-      white-space: nowrap;
-    }
-  }
-
-  .dom-lenta-footer__nav-link:hover,
-  .dom-lenta-footer__phone:hover,
-  .dom-lenta-footer__social-link:hover {
-    color: var(--dom-lenta-orange-color);
+  @include mq.down(sm) {
+    gap: 3.3rem;
+    padding-top: 2rem;
+    padding-bottom: 2.8rem;
   }
 }
+
+.dom-lenta-footer__navigation {
+  display: flex;
+  gap: 7.7rem;
+
+  @include mq.down(sm) {
+    gap: 3.1rem;
+  }
+}
+
+.dom-lenta-footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.1rem;
+
+  @include mq.down(sm) {
+    gap: 1.2rem;
+  }
+}
+
+.dom-lenta-footer__nav-link {
+  display: block;
+}
+
+.dom-lenta-footer__nav-link,
+.dom-lenta-footer__phone,
+.dom-lenta-footer__copyright {
+  font-size: 2.05rem;
+  font-weight: 400;
+  line-height: 1;
+
+  @include mq.down(sm) {
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+}
+
+.dom-lenta-footer__nav-link,
+.dom-lenta-footer__phone,
+.dom-lenta-footer__social-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.dom-lenta-footer__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3.2rem;
+
+  @include mq.down(sm) {
+    gap: 1.2rem;
+  }
+}
+
+.dom-lenta-footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+
+  @include mq.down(sm) {
+    gap: 0.75rem;
+    margin-bottom: 1.7rem;
+  }
+}
+
+.dom-lenta-footer__social-icon {
+  display: block;
+  inline-size: auto;
+  block-size: 3.4rem;
+  flex: none;
+  fill: currentColor;
+
+  @include mq.down(sm) {
+    block-size: 1.97rem;
+  }
+}
+
+.dom-lenta-footer__nav:nth-child(2) {
+  @include mq.down(sm) {
+    inline-size: 6.8rem;
+  }
+}
+
+.dom-lenta-footer__phone,
+.dom-lenta-footer__copyright {
+  @include mq.down(sm) {
+    white-space: nowrap;
+  }
+}
+
+.dom-lenta-footer__nav-link:hover,
+.dom-lenta-footer__phone:hover,
+.dom-lenta-footer__social-link:hover {
+  color: var(--dom-lenta-orange-color);
+}
+

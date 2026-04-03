@@ -1,11 +1,10 @@
-@layer layout {
-  .page-header {
-    position: sticky;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 70;
-    background-color: #fff;
-    color: var(--text-color);
-  }
+.page-header {
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 70;
+  background-color: #fff;
+  color: var(--text-color);
 }
+

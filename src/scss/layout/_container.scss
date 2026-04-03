@@ -1,8 +1,6 @@
-@layer layout {
-  .dom-lenta-container {
-    width: 100%;
-    max-width: calc(var(--container-max-width) + (var(--container-padding) * 2));
-    margin-inline: auto;
-    padding-inline: var(--container-padding);
-  }
+.dom-lenta-container {
+  width: 100%;
+  max-width: calc(var(--dom-lenta-container-max-width) + (var(--dom-lenta-container-padding) * 2));
+  margin-inline: auto;
+  padding-inline: var(--dom-lenta-container-padding);
 }

@@ -1,214 +1,213 @@
 @use "../tools/media" as mq;
 
-@layer sections {
-  .dom-lenta-feedback {
-    margin-bottom: 18rem;
-
-    @include mq.down(sm) {
-      margin-bottom: 5rem;
-    }
-  }
-
-  .dom-lenta-feedback__inner {
-    padding: 5.5rem 0 3.9rem;
-    border-radius: 3.5rem;
-    background-color: var(--dom-lenta-dark-blue-color);
-    background-image: url("/images/dom-lenta-feedback/58.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: #f9f9f9;
-    overflow: clip;
-
-    @include mq.down(sm) {
-      padding: 1.9rem 0 1.4rem;
-      border-radius: 1.648rem;
-      background-image: url("/images/dom-lenta-feedback/form-mobile.svg");
-      background-position: top left;
-      background-size: cover;
-    }
-  }
-
-  .dom-lenta-feedback__header {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
-    align-items: start;
-
-    @include mq.down(sm) {
-      position: relative;
-      display: block;
-    }
-  }
-
-  .dom-lenta-feedback__label {
-    grid-column: 1 / 2;
-    font-size: 2.4rem;
-    font-weight: 400;
-    line-height: 1;
-    text-transform: uppercase;
-
-    @include mq.down(sm) {
-      position: absolute;
-      right: 0;
-      top: 0;
-      font-size: 1rem;
-      text-align: right;
-    }
-  }
-
-  .dom-lenta-feedback__header-content {
-    grid-column: 2 / -1;
-    display: flex;
-    flex-direction: column;
-    gap: 3.3rem;
-
-    @include mq.down(sm) {
-      padding-top: 2.2rem;
-      gap: 3.5rem;
-    }
-  }
-
-  .dom-lenta-feedback__title {
-    font-size: 4.9rem;
-    font-weight: 700;
-    line-height: 1;
-    text-wrap: balance;
-
-    @include mq.down(sm) {
-      max-width: 30.6rem;
-      font-size: 3.5rem;
-      text-wrap: initial;
-
-      br {
-        display: none;
-      }
-    }
-  }
-
-  .dom-lenta-feedback__description {
-    font-size: 2.4rem;
-    font-weight: 400;
-    line-height: 1.1;
-
-    @include mq.down(sm) {
-      max-width: 24.2rem;
-      font-size: 1.6rem;
-
-      br {
-        display: none;
-      }
-    }
-  }
-
-  .dom-lenta-feedback__form {
-    margin-top: 12rem;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
-    align-items: start;
-
-    @include mq.down(sm) {
-      margin-top: 3.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      align-items: stretch;
-    }
-  }
-
-  .dom-lenta-feedback__field {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .dom-lenta-feedback__control {
-    display: block;
-  }
-
-  .dom-lenta-feedback__input {
-    width: 100%;
-    height: 100%;
-    color: var(--dom-lenta-dark-blue-color);
-    font-size: 2.4rem;
-    font-weight: 400;
-    line-height: 1;
-    height: 7.4rem;
-    background-color: #fff;
-    border-radius: 2rem;
-    padding: 0 2.9rem;
-
-    @include mq.down(sm) {
-      height: auto;
-      border-radius: 1.396rem;
-      padding: 1.95rem 2rem 2.02rem;
-      font-size: 1.675rem;
-    }
-  }
-
-  .dom-lenta-feedback__input::placeholder {
-    color: var(--dom-lenta-dark-blue-color);
-    opacity: 1;
-  }
-
-  .dom-lenta-feedback__submit {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2.3rem 2rem;
-    border-radius: 2rem;
-    background-color: var(--dom-lenta-orange-color);
-    color: #fff;
-    font-size: 2.8rem;
-    font-weight: 700;
-    line-height: 1;
-    text-transform: uppercase;
-    transition:
-      background-color 0.2s,
-      color 0.2s;
-
-    @include mq.down(sm) {
-      align-self: flex-start;
-      padding: 1.2rem 2rem 1.1rem;
-      border-radius: 0.857rem;
-      font-size: 1.6rem;
-      backdrop-filter: blur(1rem);
-    }
-  }
-
-  .dom-lenta-feedback__submit-text--mobile {
-    display: none;
-  }
-
-  .dom-lenta-feedback__submit-text--desktop {
-    display: inline;
-  }
+.dom-lenta-feedback {
+  margin-bottom: 18rem;
 
   @include mq.down(sm) {
-    .dom-lenta-feedback__submit-text--desktop {
+    margin-bottom: 5rem;
+  }
+}
+
+.dom-lenta-feedback__inner {
+  padding: 5.5rem 0 3.9rem;
+  border-radius: 3.5rem;
+  background-color: var(--dom-lenta-dark-blue-color);
+  background-image: url("/images/dom-lenta-feedback/58.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #f9f9f9;
+  overflow: clip;
+
+  @include mq.down(sm) {
+    padding: 1.9rem 0 1.4rem;
+    border-radius: 1.648rem;
+    background-image: url("/images/dom-lenta-feedback/form-mobile.svg");
+    background-position: top left;
+    background-size: cover;
+  }
+}
+
+.dom-lenta-feedback__header {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: start;
+
+  @include mq.down(sm) {
+    position: relative;
+    display: block;
+  }
+}
+
+.dom-lenta-feedback__label {
+  grid-column: 1 / 2;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+
+  @include mq.down(sm) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1rem;
+    text-align: right;
+  }
+}
+
+.dom-lenta-feedback__header-content {
+  grid-column: 2 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 3.3rem;
+
+  @include mq.down(sm) {
+    padding-top: 2.2rem;
+    gap: 3.5rem;
+  }
+}
+
+.dom-lenta-feedback__title {
+  font-size: 4.9rem;
+  font-weight: 700;
+  line-height: 1;
+  text-wrap: balance;
+
+  @include mq.down(sm) {
+    max-width: 30.6rem;
+    font-size: 3.5rem;
+    text-wrap: initial;
+
+    br {
       display: none;
-    }
-
-    .dom-lenta-feedback__submit-text--mobile {
-      display: inline;
-    }
-  }
-
-  .dom-lenta-feedback__submit:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-  }
-
-  .dom-lenta-feedback .validation-error {
-    color: #fff;
-    font-size: 1.4rem;
-    line-height: 1.2;
-  }
-
-  .dom-lenta-feedback .dom-lenta-container {
-    @include mq.down(sm) {
-      padding-inline: 1.5rem;
     }
   }
 }
+
+.dom-lenta-feedback__description {
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.1;
+
+  @include mq.down(sm) {
+    max-width: 24.2rem;
+    font-size: 1.6rem;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.dom-lenta-feedback__form {
+  margin-top: 12rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: start;
+
+  @include mq.down(sm) {
+    margin-top: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+}
+
+.dom-lenta-feedback__field {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dom-lenta-feedback__control {
+  display: block;
+}
+
+.dom-lenta-feedback__input {
+  width: 100%;
+  height: 100%;
+  color: var(--dom-lenta-dark-blue-color);
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1;
+  height: 7.4rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 0 2.9rem;
+
+  @include mq.down(sm) {
+    height: auto;
+    border-radius: 1.396rem;
+    padding: 1.95rem 2rem 2.02rem;
+    font-size: 1.675rem;
+  }
+}
+
+.dom-lenta-feedback__input::placeholder {
+  color: var(--dom-lenta-dark-blue-color);
+  opacity: 1;
+}
+
+.dom-lenta-feedback__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.3rem 2rem;
+  border-radius: 2rem;
+  background-color: var(--dom-lenta-orange-color);
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+
+  @include mq.down(sm) {
+    align-self: flex-start;
+    padding: 1.2rem 2rem 1.1rem;
+    border-radius: 0.857rem;
+    font-size: 1.6rem;
+    backdrop-filter: blur(1rem);
+  }
+}
+
+.dom-lenta-feedback__submit-text--mobile {
+  display: none;
+}
+
+.dom-lenta-feedback__submit-text--desktop {
+  display: inline;
+}
+
+@include mq.down(sm) {
+  .dom-lenta-feedback__submit-text--desktop {
+    display: none;
+  }
+
+  .dom-lenta-feedback__submit-text--mobile {
+    display: inline;
+  }
+}
+
+.dom-lenta-feedback__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.dom-lenta-feedback .validation-error {
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+.dom-lenta-feedback .dom-lenta-container {
+  @include mq.down(sm) {
+    padding-inline: 1.5rem;
+  }
+}
+

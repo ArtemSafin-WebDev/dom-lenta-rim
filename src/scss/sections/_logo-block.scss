@@ -1,17 +1,16 @@
 @use "../tools/media" as mq;
 
-@layer sections {
-  .dom-lenta-logo-block {
-    margin-bottom: 5.2rem;
+.dom-lenta-logo-block {
+  margin-bottom: 5.2rem;
 
-    @include mq.down(sm) {
-      margin-bottom: 2.5rem;
-    }
-  }
-
-  .dom-lenta-logo-block__image {
-    display: block;
-    width: 100%;
-    height: auto;
+  @include mq.down(sm) {
+    margin-bottom: 2.5rem;
   }
 }
+
+.dom-lenta-logo-block__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+

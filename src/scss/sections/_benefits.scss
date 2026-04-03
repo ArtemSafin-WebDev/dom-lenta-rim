@@ -1,225 +1,224 @@
 @use "../tools/media" as mq;
 
-@layer sections {
-  .dom-lenta-benefits {
-    margin-bottom: 15rem;
+.dom-lenta-benefits {
+  margin-bottom: 15rem;
 
-    @include mq.down(sm) {
-      margin-bottom: 5rem;
-    }
+  @include mq.down(sm) {
+    margin-bottom: 5rem;
   }
+}
 
-  .dom-lenta-benefits__header {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    column-gap: 3rem;
-    align-items: start;
-    margin-bottom: 4.8rem;
+.dom-lenta-benefits__header {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 3rem;
+  align-items: start;
+  margin-bottom: 4.8rem;
 
-    @include mq.down(sm) {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 2.5rem;
-    }
-  }
-
-  .dom-lenta-benefits__label {
-    font-size: 2.4rem;
-    font-weight: 400;
-    line-height: 1.4;
-    text-transform: uppercase;
-    grid-column: 1 / 2;
-
-    @include mq.down(sm) {
-      margin-left: auto;
-      font-size: 1rem;
-      line-height: 1;
-      text-align: right;
-    }
-  }
-
-  .dom-lenta-benefits__header-content {
-    grid-column: 2 / -1;
+  @include mq.down(sm) {
     display: flex;
     flex-direction: column;
-    gap: 3.2rem;
-
-    @include mq.down(sm) {
-      margin-top: 1.2rem;
-      gap: 2.5rem;
-    }
+    margin-bottom: 2.5rem;
   }
+}
 
-  .dom-lenta-benefits__title {
-    font-size: 4.8rem;
-    font-weight: 700;
+.dom-lenta-benefits__label {
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-transform: uppercase;
+  grid-column: 1 / 2;
+
+  @include mq.down(sm) {
+    margin-left: auto;
+    font-size: 1rem;
     line-height: 1;
-    text-wrap: balance;
-
-    @include mq.down(sm) {
-      font-size: 3.5rem;
-      text-wrap: initial;
-
-      br {
-        display: none;
-      }
-    }
+    text-align: right;
   }
+}
 
-  .dom-lenta-benefits__description {
-    font-size: 2.4rem;
-    font-weight: 400;
-    line-height: 1.1;
+.dom-lenta-benefits__header-content {
+  grid-column: 2 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
 
-    @include mq.down(sm) {
-      font-size: 1.6rem;
-
-      br {
-        display: none;
-      }
-    }
+  @include mq.down(sm) {
+    margin-top: 1.2rem;
+    gap: 2.5rem;
   }
+}
 
-  .dom-lenta-benefits__body {
-    display: grid;
-    grid-template-columns: minmax(0, 2.06fr) minmax(0, 1fr);
-    gap: 3rem;
-    align-items: stretch;
+.dom-lenta-benefits__title {
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 1;
+  text-wrap: balance;
 
-    @include mq.down(sm) {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-  }
+  @include mq.down(sm) {
+    font-size: 3.5rem;
+    text-wrap: initial;
 
-  .dom-lenta-benefits__media {
-    border-radius: 3.5rem;
-    overflow: clip;
-    background-color: #4c4c4c;
-    position: relative;
-    &::before {
-      content: "";
-      display: block;
-      padding-bottom: 56.25%;
-    }
-
-    @include mq.down(sm) {
-      border-radius: 1.5rem;
-      aspect-ratio: 337 / 180;
-
-      &::before {
-        display: none;
-      }
-    }
-  }
-
-  .dom-lenta-benefits__image {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .dom-lenta-benefits__side {
-    display: grid;
-    grid-template-rows: minmax(0, 1fr) auto;
-    row-gap: 2rem;
-
-    @include mq.down(sm) {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-  }
-
-  .dom-lenta-benefits__list {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    counter-reset: dom-lenta-benefits-item;
-
-    @include mq.down(sm) {
-      gap: 0.5rem;
-    }
-  }
-
-  .dom-lenta-benefits__item {
-    counter-increment: dom-lenta-benefits-item;
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    align-items: start;
-    column-gap: 4rem;
-    padding: 3.4rem 6.3rem;
-    border-radius: 2rem;
-    background-color: rgba(8, 18, 44, 0.05);
-
-    @include mq.down(sm) {
-      align-items: flex-start;
-      column-gap: 5.4rem;
-      padding: 2rem 3.6rem 2rem 4.8rem;
-      border-radius: 1.5rem;
-    }
-
-    &::before {
-      content: counter(dom-lenta-benefits-item, decimal-leading-zero) "/";
-      font-size: 2.4rem;
-      font-weight: 400;
-      line-height: 1;
-      color: #000;
-      white-space: nowrap;
-      margin-top: 0.2rem;
-
-      @include mq.down(sm) {
-        font-size: 1.8rem;
-        margin-top: 0;
-      }
-    }
-  }
-
-  .dom-lenta-benefits__item-text {
-    font-size: 2.4rem;
-    font-weight: 400;
-    line-height: 1.1;
-    color: #000;
-
-    @include mq.down(sm) {
-      font-size: 1.8rem;
-    }
-  }
-
-  .dom-lenta-benefits__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 2.35rem 2rem;
-    border-radius: 2rem;
-    font-size: 2.8rem;
-    font-weight: 700;
-    line-height: 1;
-    text-transform: uppercase;
-    color: #fff;
-    background-color: var(--dom-lenta-dark-blue-color);
-    transition:
-      background-color 0.2s,
-      color 0.2s;
-
-    @include mq.down(sm) {
-      min-height: 5.8rem;
-      padding: 1.8rem 2rem;
-      border-radius: 1.5rem;
-      font-size: 1.6rem;
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-      &:hover {
-        background-color: var(--dom-lenta-orange-color);
-      }
+    br {
+      display: none;
     }
   }
 }
+
+.dom-lenta-benefits__description {
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.1;
+
+  @include mq.down(sm) {
+    font-size: 1.6rem;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.dom-lenta-benefits__body {
+  display: grid;
+  grid-template-columns: minmax(0, 2.06fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: stretch;
+
+  @include mq.down(sm) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.dom-lenta-benefits__media {
+  border-radius: 3.5rem;
+  overflow: clip;
+  background-color: #4c4c4c;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 56.25%;
+  }
+
+  @include mq.down(sm) {
+    border-radius: 1.5rem;
+    aspect-ratio: 337 / 180;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.dom-lenta-benefits__image {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.dom-lenta-benefits__side {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  row-gap: 2rem;
+
+  @include mq.down(sm) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.dom-lenta-benefits__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  counter-reset: dom-lenta-benefits-item;
+
+  @include mq.down(sm) {
+    gap: 0.5rem;
+  }
+}
+
+.dom-lenta-benefits__item {
+  counter-increment: dom-lenta-benefits-item;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  column-gap: 4rem;
+  padding: 3.4rem 6.3rem;
+  border-radius: 2rem;
+  background-color: rgba(8, 18, 44, 0.05);
+
+  @include mq.down(sm) {
+    align-items: flex-start;
+    column-gap: 5.4rem;
+    padding: 2rem 3.6rem 2rem 4.8rem;
+    border-radius: 1.5rem;
+  }
+
+  &::before {
+    content: counter(dom-lenta-benefits-item, decimal-leading-zero) "/";
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #000;
+    white-space: nowrap;
+    margin-top: 0.2rem;
+
+    @include mq.down(sm) {
+      font-size: 1.8rem;
+      margin-top: 0;
+    }
+  }
+}
+
+.dom-lenta-benefits__item-text {
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #000;
+
+  @include mq.down(sm) {
+    font-size: 1.8rem;
+  }
+}
+
+.dom-lenta-benefits__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2.35rem 2rem;
+  border-radius: 2rem;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--dom-lenta-dark-blue-color);
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+
+  @include mq.down(sm) {
+    min-height: 5.8rem;
+    padding: 1.8rem 2rem;
+    border-radius: 1.5rem;
+    font-size: 1.6rem;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: var(--dom-lenta-orange-color);
+    }
+  }
+}
+

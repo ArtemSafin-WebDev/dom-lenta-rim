@@ -1,228 +1,227 @@
 @use "../tools/media" as mq;
 
-@layer sections {
-  .dom-lenta-audience {
-    margin-bottom: 15rem;
+.dom-lenta-audience {
+  margin-bottom: 15rem;
 
-    @include mq.down(sm) {
-      margin-bottom: 5rem;
-    }
-  }
-
-  .dom-lenta-audience__header {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    column-gap: 3rem;
-    align-items: start;
+  @include mq.down(sm) {
     margin-bottom: 5rem;
-
-    @include mq.down(sm) {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 3rem;
-    }
   }
+}
 
-  .dom-lenta-audience__label {
-    font-size: 2.5rem;
-    font-weight: 400;
-    line-height: 1.4;
-    text-transform: uppercase;
-    grid-column: 1 / 2;
+.dom-lenta-audience__header {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 3rem;
+  align-items: start;
+  margin-bottom: 5rem;
 
-    @include mq.down(sm) {
-      order: 1;
-      margin-left: auto;
-      font-size: 1rem;
-      line-height: 1;
-      text-align: right;
-    }
+  @include mq.down(sm) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
   }
+}
 
-  .dom-lenta-audience__title {
-    text-wrap: balance;
-    font-size: 4.8rem;
-    font-weight: 700;
+.dom-lenta-audience__label {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-transform: uppercase;
+  grid-column: 1 / 2;
+
+  @include mq.down(sm) {
+    order: 1;
+    margin-left: auto;
+    font-size: 1rem;
     line-height: 1;
-    grid-column: 2 / -1;
-
-    @include mq.down(sm) {
-      order: 2;
-      margin-top: 1.5rem;
-      font-size: 3.5rem;
-      text-wrap: initial;
-    }
+    text-align: right;
   }
+}
 
-  .dom-lenta-audience__content {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 42rem);
-    column-gap: 4rem;
-    align-items: stretch;
+.dom-lenta-audience__title {
+  text-wrap: balance;
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 1;
+  grid-column: 2 / -1;
 
-    @include mq.down(sm) {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
+  @include mq.down(sm) {
+    order: 2;
+    margin-top: 1.5rem;
+    font-size: 3.5rem;
+    text-wrap: initial;
   }
+}
 
-  .dom-lenta-audience__stats-list {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    align-content: flex-start;
+.dom-lenta-audience__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 42rem);
+  column-gap: 4rem;
+  align-items: stretch;
 
-    @include mq.down(sm) {
-      order: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 2.5rem;
-    }
+  @include mq.down(sm) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
+}
 
-  .dom-lenta-audience__stats-item {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: subgrid;
-    column-gap: 3rem;
-    align-items: center;
-    padding-block: 3.2rem;
-    border-bottom: 1px solid rgba(30, 30, 30, 0.45);
+.dom-lenta-audience__stats-list {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-content: flex-start;
 
-    @include mq.down(sm) {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      align-items: flex-start;
-      padding-block: 0 2.5rem;
-      border-bottom-color: rgba(30, 30, 30, 0.6);
-    }
+  @include mq.down(sm) {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
   }
+}
 
-  .dom-lenta-audience__stats-item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
+.dom-lenta-audience__stats-item {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  column-gap: 3rem;
+  align-items: center;
+  padding-block: 3.2rem;
+  border-bottom: 1px solid rgba(30, 30, 30, 0.45);
 
-    @include mq.down(sm) {
-      border-bottom: 1px solid rgba(30, 30, 30, 0.6);
-      padding-bottom: 2.5rem;
-    }
+  @include mq.down(sm) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+    padding-block: 0 2.5rem;
+    border-bottom-color: rgba(30, 30, 30, 0.6);
   }
+}
 
-  .dom-lenta-audience__stats-value {
-    font-size: 14rem;
-    font-weight: 700;
+.dom-lenta-audience__stats-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+
+  @include mq.down(sm) {
+    border-bottom: 1px solid rgba(30, 30, 30, 0.6);
+    padding-bottom: 2.5rem;
+  }
+}
+
+.dom-lenta-audience__stats-value {
+  font-size: 14rem;
+  font-weight: 700;
+  line-height: 0.72;
+  text-transform: uppercase;
+  color: var(--dom-lenta-orange-color);
+  white-space: nowrap;
+  justify-self: flex-end;
+
+  @include mq.down(sm) {
+    font-size: 11rem;
     line-height: 0.72;
-    text-transform: uppercase;
+    justify-self: flex-start;
+  }
+}
+
+.dom-lenta-audience__stats-text {
+  align-self: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.1;
+
+  b {
     color: var(--dom-lenta-orange-color);
-    white-space: nowrap;
-    justify-self: flex-end;
-
-    @include mq.down(sm) {
-      font-size: 11rem;
-      line-height: 0.72;
-      justify-self: flex-start;
-    }
+    font-weight: inherit;
   }
 
-  .dom-lenta-audience__stats-text {
-    align-self: center;
-    font-size: 2.5rem;
-    font-weight: 400;
-    line-height: 1.1;
+  @include mq.down(sm) {
+    max-width: 30ch;
+    align-self: flex-start;
+    font-size: 1.6rem;
 
-    b {
-      color: var(--dom-lenta-orange-color);
-      font-weight: inherit;
-    }
-
-    @include mq.down(sm) {
-      max-width: 30ch;
-      align-self: flex-start;
-      font-size: 1.6rem;
-
-      br {
-        display: none;
-      }
-    }
-  }
-
-  .dom-lenta-audience__card {
-    display: grid;
-
-    &::before {
-      content: "";
-      padding-bottom: 100%;
-      grid-column: 1 / -1;
-      grid-row: 1 / 2;
-    }
-
-    @include mq.down(sm) {
-      order: 2;
-      display: block;
-
-      &::before {
-        display: none;
-      }
-    }
-  }
-
-  .dom-lenta-audience__card-media {
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
-    flex-grow: 1;
-    position: relative;
-    border-radius: 3.5rem;
-    overflow: clip;
-    background-color: #dedede;
-
-    @include mq.down(sm) {
+    br {
       display: none;
     }
   }
+}
 
-  .dom-lenta-audience__card-image {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
+.dom-lenta-audience__card {
+  display: grid;
 
-  .dom-lenta-audience__card-button {
+  &::before {
+    content: "";
+    padding-bottom: 100%;
     grid-column: 1 / -1;
     grid-row: 1 / 2;
-    align-self: flex-end;
-    padding: 2.2rem 2rem;
-    font-size: 2.8rem;
-    font-weight: 700;
-    line-height: 1;
-    text-transform: uppercase;
-    text-align: center;
-    color: #fff;
-    background-color: var(--dom-lenta-orange-color);
-    z-index: 10;
-    border-radius: 2rem;
-    transition:
-      background-color 0.2s,
-      color 0.2s;
-
-    @include mq.down(sm) {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 16.2rem;
-      padding: 1.2rem 2.4rem;
-      border-radius: 0.86rem;
-      font-size: 1.6rem;
-    }
   }
 
-  @supports not (grid-template-columns: subgrid) {
-    .dom-lenta-audience__stats-item {
-      grid-template-columns: auto minmax(0, 1fr);
+  @include mq.down(sm) {
+    order: 2;
+    display: block;
+
+    &::before {
+      display: none;
     }
   }
 }
+
+.dom-lenta-audience__card-media {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  flex-grow: 1;
+  position: relative;
+  border-radius: 3.5rem;
+  overflow: clip;
+  background-color: #dedede;
+
+  @include mq.down(sm) {
+    display: none;
+  }
+}
+
+.dom-lenta-audience__card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.dom-lenta-audience__card-button {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  align-self: flex-end;
+  padding: 2.2rem 2rem;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background-color: var(--dom-lenta-orange-color);
+  z-index: 10;
+  border-radius: 2rem;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+
+  @include mq.down(sm) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 16.2rem;
+    padding: 1.2rem 2.4rem;
+    border-radius: 0.86rem;
+    font-size: 1.6rem;
+  }
+}
+
+@supports not (grid-template-columns: subgrid) {
+  .dom-lenta-audience__stats-item {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+}
+
