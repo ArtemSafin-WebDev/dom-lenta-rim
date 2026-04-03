@@ -247,6 +247,11 @@
     background-color 0.2s,
     color 0.2s;
 
+  &:link,
+  &:visited {
+    color: white;
+  }
+
   @include mq.down(sm) {
     border-radius: 1.5rem;
     padding: 1.8rem 2rem;
@@ -271,4 +276,3 @@
     background-color: var(--dom-lenta-orange-color);
   }
 }
-

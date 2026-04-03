@@ -208,6 +208,11 @@
     background-color 0.2s,
     color 0.2s;
 
+  &:link,
+  &:visited {
+    color: white;
+  }
+
   @include mq.down(sm) {
     min-height: 5.8rem;
     padding: 1.8rem 2rem;
@@ -221,4 +226,3 @@
     }
   }
 }
-

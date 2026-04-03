@@ -116,10 +116,14 @@
     background-color 0.2s,
     color 0.2s;
 
+  &:link,
+  &:visited {
+    color: white;
+  }
+
   @include mq.down(sm) {
     padding: 1.4rem 2rem;
     border-radius: 0.857rem;
     font-size: 1.6rem;
   }
 }
-
