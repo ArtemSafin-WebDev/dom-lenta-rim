@@ -126,4 +126,10 @@
     border-radius: 0.857rem;
     font-size: 1.6rem;
   }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: #cc4121;
+    }
+  }
 }

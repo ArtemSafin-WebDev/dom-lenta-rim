@@ -22,14 +22,18 @@ $breakpoints: (
   @error "Unknown breakpoint `#{$point}`. Use one of: #{map.keys($breakpoints)} or pass a length value.";
 }
 
+@function bp-next($point) {
+  @return calc(#{bp($point)} + 0.02px);
+}
+
 @mixin up($from) {
-  @media (width > bp($from)) {
+  @media (min-width: bp-next($from)) {
     @content;
   }
 }
 
 @mixin down($to) {
-  @media (width <= bp($to)) {
+  @media (max-width: bp($to)) {
     @content;
   }
 }
@@ -42,7 +46,7 @@ $breakpoints: (
     @error "`between(#{$from}, #{$to})` is invalid: min breakpoint is greater than max breakpoint.";
   }
 
-  @media (width > $min-width) and (width <= $max-width) {
+  @media (min-width: calc(#{$min-width} + 0.02px)) and (max-width: $max-width) {
     @content;
   }
 }

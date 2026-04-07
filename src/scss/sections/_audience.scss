@@ -221,6 +221,12 @@
     border-radius: 0.86rem;
     font-size: 1.6rem;
   }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: #cc4121;
+    }
+  }
 }
 
 @supports not (grid-template-columns: subgrid) {

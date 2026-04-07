@@ -172,7 +172,12 @@
     padding: 1.2rem 2rem 1.1rem;
     border-radius: 0.857rem;
     font-size: 1.6rem;
-    backdrop-filter: blur(1rem);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover:not(:disabled) {
+      background-color: #cc4121;
+    }
   }
 }
 
@@ -210,4 +215,3 @@
     padding-inline: 1.5rem;
   }
 }
-
