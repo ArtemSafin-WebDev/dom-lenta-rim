@@ -79,12 +79,6 @@
     font-size: 3.5rem;
     text-wrap: initial;
   }
-
-  @include mq.up(sm) {
-    br {
-      display: none;
-    }
-  }
 }
 
 .dom-lenta-feedback__description {
