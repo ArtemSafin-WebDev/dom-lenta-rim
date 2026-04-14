@@ -211,3 +211,66 @@
     padding-inline: 1.5rem;
   }
 }
+
+.dom-lenta-feedback--super-format {
+  .dom-lenta-feedback__inner {
+    position: relative;
+    isolation: isolate;
+    padding: 6.3rem 0 5.6rem;
+
+    @include mq.down(sm) {
+      padding: 4rem 0 2rem;
+      border-radius: 1.648rem;
+    }
+  }
+
+  .dom-lenta-container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .dom-lenta-feedback__header {
+    display: block;
+  }
+
+  .dom-lenta-feedback__header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.6rem;
+
+    @include mq.down(sm) {
+      padding-top: 0;
+      gap: 3.5rem;
+    }
+  }
+
+  .dom-lenta-feedback__title {
+    @include mq.down(sm) {
+      max-width: 30rem;
+    }
+  }
+
+  .dom-lenta-feedback__description {
+    @include mq.down(sm) {
+      max-width: 24.2rem;
+
+      br {
+        display: block;
+      }
+    }
+  }
+
+  .dom-lenta-feedback__form {
+    margin-top: 10rem;
+
+    @include mq.down(sm) {
+      margin-top: 3.5rem;
+    }
+  }
+
+  .dom-lenta-feedback__submit {
+    @include mq.down(sm) {
+      width: 18.3rem;
+    }
+  }
+}

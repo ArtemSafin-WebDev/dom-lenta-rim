@@ -108,5 +108,18 @@ export default {
         },
       ],
     },
+    feedbackForm: {
+      modifier: "super-format",
+      titleHtml: "Поможем выбрать формат,<br>который решит ваши задачи",
+      descriptionHtml:
+        "У нас большой выбор суперформатов по всей России.<br>Оставьте заявку &mdash; подготовим предложение и расчет стоимости для вашего бизнеса!",
+      formAriaLabel: "Форма заявки на подбор суперформата",
+      formAction: "/",
+      namePlaceholder: "[ Имя ]",
+      phonePlaceholder: "[ 8-000-000-000 ]",
+      buttonTextDesktop: "Отправить",
+      buttonTextMobile: "Оставить заявку",
+      enableAjax: true,
+    },
   },
 };

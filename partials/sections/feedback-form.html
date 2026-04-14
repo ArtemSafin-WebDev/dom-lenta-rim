@@ -1,8 +1,10 @@
-<section class="dom-lenta-feedback">
+<section class="dom-lenta-feedback{{#if feedbackForm.modifier}} dom-lenta-feedback--{{feedbackForm.modifier}}{{/if}}">
   <div class="dom-lenta-feedback__inner">
     <div class="dom-lenta-container">
       <div class="dom-lenta-feedback__header">
+        {{#if feedbackForm.label}}
         <p class="dom-lenta-feedback__label">{{feedbackForm.label}}</p>
+        {{/if}}
 
         <div class="dom-lenta-feedback__header-content">
           <h2 class="dom-lenta-feedback__title">{{{feedbackForm.titleHtml}}}</h2>
@@ -10,7 +12,7 @@
         </div>
       </div>
 
-      <form class="dom-lenta-feedback__form" action="{{feedbackForm.formAction}}" method="post"
+      <form class="dom-lenta-feedback__form{{#if feedbackForm.enableAjax}} js-form{{/if}}" action="{{feedbackForm.formAction}}" method="post"
         aria-label="{{feedbackForm.formAriaLabel}}">
         <div class="dom-lenta-feedback__field">
           <div class="dom-lenta-feedback__field-wrap">
