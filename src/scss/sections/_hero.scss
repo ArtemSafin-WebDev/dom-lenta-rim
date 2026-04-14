@@ -101,6 +101,9 @@
 }
 
 .dom-lenta-hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding-inline: 8.8rem;
   padding-block: 2.3rem;
   border-radius: 2rem;
@@ -131,5 +134,77 @@
     &:hover {
       background-color: #cc4121;
     }
+  }
+}
+
+.dom-lenta-hero--super-format {
+  .dom-lenta-hero__background {
+    background-color: #4c4c4c;
+  }
+
+  .dom-lenta-hero__content {
+    padding-top: 5rem;
+  }
+
+  .dom-lenta-hero__title {
+    max-width: 74.7rem;
+  }
+
+  .dom-lenta-hero__description {
+    max-width: 51.7rem;
+  }
+
+  .dom-lenta-hero__button {
+    min-width: 42.7rem;
+  }
+
+  @include mq.down(sm) {
+    .dom-lenta-hero__content {
+      padding-top: 7rem;
+      padding-right: 1.1rem;
+      padding-left: 1.5rem;
+    }
+
+    .dom-lenta-hero__title {
+      max-width: 31rem;
+      font-size: 3.5rem;
+    }
+
+    .dom-lenta-hero__description {
+      max-width: 25.1rem;
+    }
+
+    .dom-lenta-hero__button {
+      min-width: 18.3rem;
+      min-height: 3.9rem;
+      padding: 0.9rem 2rem;
+    }
+  }
+}
+
+.dom-lenta-hero__mobile-break {
+  display: none;
+
+  @include mq.down(sm) {
+    display: initial;
+  }
+}
+
+.dom-lenta-hero__logo {
+  position: absolute;
+  z-index: 1;
+  right: 6rem;
+  bottom: 5.8rem;
+  width: 25.8rem;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+
+  @include mq.down(sm) {
+    top: 2.8rem;
+    right: auto;
+    bottom: auto;
+    left: 1.5rem;
+    width: 10.3rem;
   }
 }

@@ -1,0 +1,24 @@
+<section class="dom-lenta-hero dom-lenta-hero--super-format">
+  <div class="dom-lenta-container">
+    <div class="dom-lenta-hero__inner">
+      <div class="dom-lenta-hero__background">
+        <picture>
+          <source media="(max-width: 576px)" srcset="{{hero.image.mobileSrc}}" />
+          <img class="dom-lenta-hero__background-image" src="{{hero.image.desktopSrc}}" alt="{{hero.image.alt}}"
+            width="2680" height="1236" loading="eager" fetchpriority="high" decoding="async" />
+        </picture>
+      </div>
+
+      <img class="dom-lenta-hero__logo" src="{{hero.logo.src}}" alt="{{hero.logo.alt}}" width="258" height="50"
+        loading="eager" fetchpriority="high" decoding="async" />
+
+      <div class="dom-lenta-hero__content">
+        <h1 class="dom-lenta-hero__title">{{{hero.titleHtml}}}</h1>
+        <p class="dom-lenta-hero__description">{{{hero.descriptionHtml}}}</p>
+        <button class="dom-lenta-hero__button" type="button">
+          {{hero.buttonText}}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
