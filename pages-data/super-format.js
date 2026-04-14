@@ -16,5 +16,97 @@ export default {
         alt: "Суперформат.РФ",
       },
     },
+    superFormatCampaign: {
+      titleHtml:
+        "Суперформат &mdash; инструмент<br>для масштабных рекламных кампаний",
+      listAriaLabel: "Преимущества суперформата для рекламных кампаний",
+      items: [
+        "Премиум-локации<br>с высоким трафиком",
+        "Статус<br>лидера",
+        "Миллионы<br>контактов",
+        "Высокий уровень<br>запоминаемости",
+        "Быстрый<br>запуск",
+      ],
+      buttonText: "ОСТАВИТЬ ЗАЯВКУ",
+      slides: [
+        {
+          title: "Казань, пр. Ямашева, 115А",
+          image: {
+            src: "/images/dom-lenta-super-format-campaign/object.webp",
+            alt: "",
+          },
+        },
+        {
+          title: "Москва, Ленинградское шоссе",
+          image: {
+            src: "/images/dom-lenta-super-format-campaign/object.webp",
+            alt: "",
+          },
+        },
+        {
+          title: "Санкт-Петербург, Пулковское шоссе",
+          image: {
+            src: "/images/dom-lenta-super-format-campaign/object.webp",
+            alt: "",
+          },
+        },
+        {
+          title: "Екатеринбург, ул. Металлургов",
+          image: {
+            src: "/images/dom-lenta-super-format-campaign/object.webp",
+            alt: "",
+          },
+        },
+        {
+          title: "Новосибирск, ул. Большевистская",
+          image: {
+            src: "/images/dom-lenta-super-format-campaign/object.webp",
+            alt: "",
+          },
+        },
+        {
+          title: "Нижний Новгород, Казанское шоссе",
+          image: {
+            src: "/images/dom-lenta-super-format-campaign/object.webp",
+            alt: "",
+          },
+        },
+        {
+          title: "Краснодар, ул. Дзержинского",
+          image: {
+            src: "/images/dom-lenta-super-format-campaign/object.webp",
+            alt: "",
+          },
+        },
+        {
+          title: "Ростов-на-Дону, пр. Михаила Нагибина",
+          image: {
+            src: "/images/dom-lenta-super-format-campaign/object.webp",
+            alt: "",
+          },
+        },
+        {
+          title: "Самара, Московское шоссе",
+          image: {
+            src: "/images/dom-lenta-super-format-campaign/object.webp",
+            alt: "",
+          },
+        },
+        {
+          title: "Уфа, пр. Октября",
+          image: {
+            src: "/images/dom-lenta-super-format-campaign/object.webp",
+            alt: "",
+          },
+        },
+        {
+          title: "Пермь, шоссе Космонавтов",
+          image: {
+            src: "/images/dom-lenta-super-format-campaign/object.webp",
+            alt: "",
+          },
+        },
+      ],
+    },
   },
 };

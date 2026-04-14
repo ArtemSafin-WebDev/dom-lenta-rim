@@ -1,1 +1,5 @@
-export default function sections() {}
+import superFormatCampaign from "./superFormatCampaign";
+
+export default function sections() {
+  superFormatCampaign();
+}

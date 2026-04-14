@@ -154,10 +154,6 @@
     max-width: 51.7rem;
   }
 
-  .dom-lenta-hero__button {
-    min-width: 42.7rem;
-  }
-
   @include mq.down(sm) {
     .dom-lenta-hero__content {
       padding-top: 7rem;
@@ -179,14 +175,6 @@
       min-height: 3.9rem;
       padding: 0.9rem 2rem;
     }
-  }
-}
-
-.dom-lenta-hero__mobile-break {
-  display: none;
-
-  @include mq.down(sm) {
-    display: initial;
   }
 }
 

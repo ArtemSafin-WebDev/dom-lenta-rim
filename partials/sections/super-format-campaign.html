@@ -1,0 +1,35 @@
+<section class="dom-lenta-super-format-campaign">
+  <div class="dom-lenta-container">
+    <h2 class="dom-lenta-super-format-campaign__title">{{{superFormatCampaign.titleHtml}}}</h2>
+
+    <div class="dom-lenta-super-format-campaign__body">
+      <div class="dom-lenta-super-format-campaign__side">
+        <ol class="dom-lenta-super-format-campaign__list" aria-label="{{superFormatCampaign.listAriaLabel}}">
+          {{#each superFormatCampaign.items}}
+          <li class="dom-lenta-super-format-campaign__item">
+            <span class="dom-lenta-super-format-campaign__item-text">{{{this}}}</span>
+          </li>
+          {{/each}}
+        </ol>
+
+        <button class="dom-lenta-super-format-campaign__button" type="button">
+          {{superFormatCampaign.buttonText}}
+        </button>
+      </div>
+
+      <div class="dom-lenta-super-format-campaign__slider swiper js-super-format-campaign-slider">
+        <div class="dom-lenta-super-format-campaign__wrapper swiper-wrapper">
+          {{#each superFormatCampaign.slides}}
+          <article class="dom-lenta-super-format-campaign__slide swiper-slide">
+            <img class="dom-lenta-super-format-campaign__image" src="{{this.image.src}}" alt="{{this.image.alt}}"
+              width="1724" height="1350" loading="lazy" decoding="async" />
+            <h3 class="dom-lenta-super-format-campaign__slide-title">/{{this.title}}</h3>
+          </article>
+          {{/each}}
+        </div>
+
+        <div class="dom-lenta-super-format-campaign__pagination swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>

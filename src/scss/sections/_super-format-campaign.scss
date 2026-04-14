@@ -1,0 +1,188 @@
+.dom-lenta-super-format-campaign {
+  margin-bottom: 15rem;
+}
+
+.dom-lenta-super-format-campaign__title {
+  text-wrap: balance;
+  margin-bottom: 4rem;
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--dom-lenta-dark-blue-color);
+}
+
+.dom-lenta-super-format-campaign__body {
+  display: grid;
+  grid-template-columns: 42.8rem minmax(0, 1fr);
+  gap: 5rem;
+  align-items: stretch;
+}
+
+.dom-lenta-super-format-campaign__side {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dom-lenta-super-format-campaign__list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 2rem;
+  flex-grow: 1;
+  counter-reset: dom-lenta-super-format-campaign-item;
+}
+
+.dom-lenta-super-format-campaign__item {
+  counter-increment: dom-lenta-super-format-campaign-item;
+  display: grid;
+  grid-template-columns: 4.8rem minmax(0, 1fr);
+  column-gap: 4rem;
+  align-items: start;
+  min-height: 10rem;
+  padding: 2.85rem 4rem 2.6rem 5.8rem;
+  border-radius: 2rem;
+  background-color: rgba(8, 18, 44, 0.05);
+  color: var(--dom-lenta-dark-blue-color);
+
+  &::before {
+    content: counter(dom-lenta-super-format-campaign-item, decimal-leading-zero)
+      "/";
+    margin-top: 0.1rem;
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 1;
+    color: rgba(8, 18, 44, 0.25);
+    white-space: nowrap;
+  }
+}
+
+.dom-lenta-super-format-campaign__item-text {
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.dom-lenta-super-format-campaign__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
+  padding: 2.3rem 3rem;
+  border-radius: 2rem;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--dom-lenta-dark-blue-color);
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: #394156;
+    }
+  }
+}
+
+.dom-lenta-super-format-campaign__slider {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 862 / 675;
+  overflow: clip;
+  border-radius: 3.5rem;
+  background-color: #4c4c4c;
+}
+
+.dom-lenta-super-format-campaign__wrapper,
+.dom-lenta-super-format-campaign__slide {
+  height: 100%;
+}
+
+.dom-lenta-super-format-campaign__slide {
+  position: relative;
+  overflow: clip;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -30rem;
+    z-index: 1;
+    width: 203.3rem;
+    aspect-ratio: 2033 / 536;
+    border-radius: 19.85rem;
+    background-color: rgba(0, 0, 0, 0.55);
+    filter: blur(16.9rem);
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+}
+
+.dom-lenta-super-format-campaign__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  user-select: none;
+}
+
+.dom-lenta-super-format-campaign__slide-title {
+  position: absolute;
+  left: 4rem;
+  bottom: 5.2rem;
+  z-index: 2;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.dom-lenta-super-format-campaign__slider.swiper-horizontal
+  > .dom-lenta-super-format-campaign__pagination.swiper-pagination-bullets,
+.dom-lenta-super-format-campaign__slider
+  .dom-lenta-super-format-campaign__pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  position: absolute;
+  left: 4rem;
+  right: 4rem;
+  top: auto;
+  bottom: 3rem;
+  z-index: 2;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  width: auto;
+  transform: none;
+}
+
+.dom-lenta-super-format-campaign__slider.swiper-horizontal
+  > .dom-lenta-super-format-campaign__pagination.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 0.5rem;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 10rem;
+  background-color: #fff;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.dom-lenta-super-format-campaign__slider.swiper-horizontal
+  > .dom-lenta-super-format-campaign__pagination.swiper-pagination-bullets
+  .swiper-pagination-bullet-active {
+  opacity: 1;
+}
