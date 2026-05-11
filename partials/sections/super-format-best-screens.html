@@ -1,0 +1,56 @@
+<section class="dom-lenta-super-format-best-screens">
+  <div class="dom-lenta-container">
+    <p class="dom-lenta-super-format-best-screens__label">{{superFormatBestScreens.label}}</p>
+  </div>
+
+  <div class="dom-lenta-super-format-best-screens__slider js-super-format-best-screens-slider"
+    aria-label="{{superFormatBestScreens.sliderAriaLabel}}">
+    <div class="dom-lenta-super-format-best-screens__wrapper">
+      {{#each superFormatBestScreens.slides}}
+      <article class="dom-lenta-super-format-best-screens__slide">
+        <img class="dom-lenta-super-format-best-screens__image" src="{{this.image.src}}" alt="{{this.image.alt}}"
+          width="{{this.image.width}}" height="{{this.image.height}}" loading="lazy" decoding="async" />
+
+        <div class="dom-lenta-super-format-best-screens__content">
+          <div class="dom-lenta-super-format-best-screens__text">
+            <h2 class="dom-lenta-super-format-best-screens__city">{{this.city}}</h2>
+            <p class="dom-lenta-super-format-best-screens__address">/{{this.address}}</p>
+
+            <div class="dom-lenta-super-format-best-screens__description">
+              {{#each this.description}}
+              <p>{{this}}</p>
+              {{/each}}
+            </div>
+          </div>
+
+          <ul class="dom-lenta-super-format-best-screens__stats" aria-label="{{this.statsAriaLabel}}">
+            {{#each this.stats}}
+            <li class="dom-lenta-super-format-best-screens__stat">
+              <p class="dom-lenta-super-format-best-screens__stat-value">{{this.value}}</p>
+              <p class="dom-lenta-super-format-best-screens__stat-label">{{this.label}}</p>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+      </article>
+      {{/each}}
+    </div>
+
+    <button
+      class="dom-lenta-super-format-best-screens__nav dom-lenta-super-format-best-screens__nav--prev"
+      type="button"
+      aria-label="{{superFormatBestScreens.prevLabel}}"
+    ></button>
+    <button
+      class="dom-lenta-super-format-best-screens__nav dom-lenta-super-format-best-screens__nav--next"
+      type="button"
+      aria-label="{{superFormatBestScreens.nextLabel}}"
+    ></button>
+  </div>
+
+  <div class="dom-lenta-container">
+    <button class="dom-lenta-super-format-best-screens__button" type="button">
+      {{superFormatBestScreens.buttonText}}
+    </button>
+  </div>
+</section>
