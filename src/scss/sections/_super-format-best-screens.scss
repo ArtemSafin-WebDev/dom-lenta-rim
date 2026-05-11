@@ -76,28 +76,6 @@
   transition: none;
 }
 
-.dom-lenta-super-format-best-screens__slide::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(8, 18, 44, 0.78) 0%,
-      rgba(8, 18, 44, 0.52) 28%,
-      rgba(8, 18, 44, 0.12) 58%,
-      rgba(8, 18, 44, 0) 100%
-    ),
-    linear-gradient(
-      0deg,
-      rgba(8, 18, 44, 0.68) 0%,
-      rgba(8, 18, 44, 0.3) 22%,
-      rgba(8, 18, 44, 0) 48%
-    );
-}
-
 .dom-lenta-super-format-best-screens__slide--active {
   --dom-lenta-best-screen-slide-scale: 1;
   --dom-lenta-best-screen-slide-shift: 0rem;
@@ -117,9 +95,7 @@
 }
 
 .dom-lenta-super-format-best-screens__slide--next {
-  --dom-lenta-best-screen-slide-shift: var(
-    --dom-lenta-best-screen-side-shift
-  );
+  --dom-lenta-best-screen-slide-shift: var(--dom-lenta-best-screen-side-shift);
 
   pointer-events: auto;
 }
@@ -246,29 +222,20 @@
   transform: translateY(-50%);
 }
 
-.dom-lenta-super-format-best-screens__nav::before {
-  content: "";
-  width: 1.6rem;
-  aspect-ratio: 1;
-  border-top: 0.3rem solid rgba(8, 18, 44, 0.35);
-  border-right: 0.3rem solid rgba(8, 18, 44, 0.35);
-  transition: border-color 0.2s;
+.dom-lenta-super-format-best-screens__nav-icon {
+  width: 1.568rem;
+  height: 2.712rem;
+  color: rgba(8, 18, 44, 0.35);
+  fill: currentColor;
+  transition: color 0.2s;
 }
 
 .dom-lenta-super-format-best-screens__nav--prev {
   left: calc(50% - (var(--dom-lenta-best-screen-card-width) / 2) - 3.5rem);
 }
 
-.dom-lenta-super-format-best-screens__nav--prev::before {
-  transform: translateX(0.25rem) rotate(-135deg);
-}
-
 .dom-lenta-super-format-best-screens__nav--next {
   right: calc(50% - (var(--dom-lenta-best-screen-card-width) / 2) - 3.5rem);
-}
-
-.dom-lenta-super-format-best-screens__nav--next::before {
-  transform: translateX(-0.25rem) rotate(45deg);
 }
 
 .dom-lenta-super-format-best-screens__button {
@@ -290,8 +257,9 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .dom-lenta-super-format-best-screens__nav:hover::before {
-    border-color: var(--dom-lenta-dark-blue-color);
+  .dom-lenta-super-format-best-screens__nav:hover
+    .dom-lenta-super-format-best-screens__nav-icon {
+    color: var(--dom-lenta-dark-blue-color);
   }
 
   .dom-lenta-super-format-best-screens__button:hover {
@@ -365,9 +333,9 @@
     width: 4rem;
   }
 
-  .dom-lenta-super-format-best-screens__nav::before {
+  .dom-lenta-super-format-best-screens__nav-icon {
     width: 1rem;
-    border-width: 0.2rem;
+    height: 1.75rem;
   }
 
   .dom-lenta-super-format-best-screens__nav--prev {

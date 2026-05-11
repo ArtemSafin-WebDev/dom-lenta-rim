@@ -25,6 +25,15 @@ class SuperFormatBestScreensSlider extends Component {
   };
 
   private readonly handlePointerDown = (event: PointerEvent) => {
+    const target = event.target;
+
+    if (
+      target instanceof Element &&
+      target.closest(".dom-lenta-super-format-best-screens__nav")
+    ) {
+      return;
+    }
+
     if (event.pointerType === "mouse" && event.button !== 0) return;
     if (this.slides.length < 2) return;
 
