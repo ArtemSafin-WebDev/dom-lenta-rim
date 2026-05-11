@@ -1,0 +1,30 @@
+<section class="dom-lenta-super-format-geography">
+  <div class="dom-lenta-container">
+    <div class="dom-lenta-super-format-geography__inner">
+      <h2 class="dom-lenta-super-format-geography__title">{{superFormatGeography.title}}</h2>
+
+      <div class="dom-lenta-super-format-geography__body">
+        <ol class="dom-lenta-super-format-geography__stats" aria-label="{{superFormatGeography.statsAriaLabel}}">
+          {{#each superFormatGeography.stats}}
+          <li class="dom-lenta-super-format-geography__stat">
+            <p class="dom-lenta-super-format-geography__stat-value">{{this.value}}</p>
+            <p class="dom-lenta-super-format-geography__stat-text">{{this.text}}</p>
+          </li>
+          {{/each}}
+        </ol>
+
+        <div class="dom-lenta-super-format-geography__map">
+          <img class="dom-lenta-super-format-geography__map-image" src="{{superFormatGeography.map.src}}"
+            alt="{{superFormatGeography.map.alt}}" width="3706" height="1990" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <div class="dom-lenta-super-format-geography__cta">
+        <p class="dom-lenta-super-format-geography__cta-text">{{superFormatGeography.ctaText}}</p>
+        <button class="dom-lenta-super-format-geography__cta-button" type="button">
+          {{superFormatGeography.buttonText}}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,4 +1,4 @@
-<section class="dom-lenta-hero dom-lenta-hero--super-format">
+<section class="dom-lenta-hero {{hero.sectionClass}}">
   <div class="dom-lenta-container">
     <div class="dom-lenta-hero__inner">
       <div class="dom-lenta-hero__background">
@@ -9,12 +9,17 @@
         </picture>
       </div>
 
+      {{#if hero.logo}}
       <img class="dom-lenta-hero__logo" src="{{hero.logo.src}}" alt="{{hero.logo.alt}}" width="258" height="50"
         loading="eager" fetchpriority="high" decoding="async" />
+      {{/if}}
 
       <div class="dom-lenta-hero__content">
         <h1 class="dom-lenta-hero__title">{{{hero.titleHtml}}}</h1>
         <p class="dom-lenta-hero__description">{{{hero.descriptionHtml}}}</p>
+        {{#if hero.note}}
+        <p class="dom-lenta-hero__note">{{hero.note}}</p>
+        {{/if}}
         <button class="dom-lenta-hero__button" type="button">
           {{hero.buttonText}}
         </button>

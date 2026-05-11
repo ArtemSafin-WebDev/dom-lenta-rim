@@ -1,0 +1,29 @@
+<section class="dom-lenta-super-format-request">
+  <div class="dom-lenta-super-format-request__inner">
+    <img class="dom-lenta-super-format-request__image" src="{{superFormatRequest.image.src}}"
+      alt="{{superFormatRequest.image.alt}}" width="2880" height="832" loading="lazy" decoding="async" />
+
+    <form class="dom-lenta-super-format-request__form js-form" action="{{superFormatRequest.formAction}}" method="post"
+      aria-label="{{superFormatRequest.formAriaLabel}}">
+      <div class="dom-lenta-super-format-request__fields">
+        <div class="dom-lenta-super-format-request__field">
+          <div class="dom-lenta-super-format-request__field-wrap">
+            <input class="dom-lenta-super-format-request__input" type="text" name="name"
+              placeholder="{{superFormatRequest.namePlaceholder}}" autocomplete="name" required />
+          </div>
+        </div>
+
+        <div class="dom-lenta-super-format-request__field">
+          <div class="dom-lenta-super-format-request__field-wrap">
+            <input class="dom-lenta-super-format-request__input" type="tel" name="phone"
+              placeholder="{{superFormatRequest.phonePlaceholder}}" autocomplete="tel" required />
+          </div>
+        </div>
+      </div>
+
+      <button class="dom-lenta-super-format-request__submit" type="submit">
+        {{superFormatRequest.buttonText}}
+      </button>
+    </form>
+  </div>
+</section>

@@ -2,6 +2,7 @@ export default {
   "/super-format.html": {
     title: "Суперформат",
     hero: {
+      sectionClass: "dom-lenta-hero--super-format",
       titleHtml: "Премиальные<br>суперформаты<br>для лидеров рынка",
       descriptionHtml:
         "Размещайте рекламу на&nbsp;премиум-медиафасадах в&nbsp;топовых локациях&nbsp;&mdash; усиливайте имидж в&nbsp;масштабах страны!",

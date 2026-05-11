@@ -178,6 +178,67 @@
   }
 }
 
+.dom-lenta-hero--super-format-rim {
+  margin-bottom: 6rem;
+
+  .dom-lenta-hero__background {
+    background-color: #4c4c4c;
+  }
+
+  .dom-lenta-hero__content {
+    padding: 6rem 6.5rem 5.8rem;
+    gap: 1.7rem;
+  }
+
+  .dom-lenta-hero__title {
+    max-width: 82.1rem;
+    font-size: 6rem;
+    font-weight: 800;
+  }
+
+  .dom-lenta-hero__description {
+    max-width: 44.2rem;
+    font-size: 2.4rem;
+    line-height: 1.1;
+  }
+
+  .dom-lenta-hero__note {
+    max-width: 39.6rem;
+    font-size: 2.4rem;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .dom-lenta-hero__button {
+    min-width: 42.7rem;
+    padding-block: 2.3rem;
+    padding-inline: 5.5rem;
+  }
+
+  @include mq.down(sm) {
+    .dom-lenta-hero__content {
+      padding: 3rem 1.6rem 2.1rem;
+      gap: 1.3rem;
+    }
+
+    .dom-lenta-hero__title {
+      max-width: 30.6rem;
+      font-size: 3.5rem;
+    }
+
+    .dom-lenta-hero__description,
+    .dom-lenta-hero__note {
+      max-width: 28.3rem;
+      font-size: 1.6rem;
+    }
+
+    .dom-lenta-hero__button {
+      min-width: 18.3rem;
+      padding: 0.9rem 2rem;
+    }
+  }
+}
+
 .dom-lenta-hero__logo {
   position: absolute;
   z-index: 1;
