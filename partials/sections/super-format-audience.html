@@ -1,0 +1,24 @@
+<section class="dom-lenta-super-format-audience">
+  <div class="dom-lenta-container">
+    <div class="dom-lenta-super-format-audience__inner">
+      <ul class="dom-lenta-super-format-audience__stats" aria-label="{{superFormatAudience.statsAriaLabel}}">
+        {{#each superFormatAudience.stats}}
+        <li class="dom-lenta-super-format-audience__stat">
+          <p class="dom-lenta-super-format-audience__value">{{this.value}}</p>
+          <p class="dom-lenta-super-format-audience__text">{{{this.textHtml}}}</p>
+        </li>
+        {{/each}}
+      </ul>
+
+      <article class="dom-lenta-super-format-audience__card">
+        <img class="dom-lenta-super-format-audience__image" src="{{superFormatAudience.image.src}}"
+          alt="{{superFormatAudience.image.alt}}" width="{{superFormatAudience.image.width}}"
+          height="{{superFormatAudience.image.height}}" loading="lazy" decoding="async" />
+
+        <button class="dom-lenta-super-format-audience__button" type="button">
+          {{superFormatAudience.buttonText}}
+        </button>
+      </article>
+    </div>
+  </div>
+</section>

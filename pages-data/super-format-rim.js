@@ -56,6 +56,67 @@ export default {
       ctaText: "Узнайте о преимуществах локаций каждого экрана!",
       buttonText: "Подробнее",
     },
+    superFormatAudience: {
+      statsAriaLabel: "Показатели медиагруппы РИМ",
+      buttonText: "Подробнее",
+      stats: [
+        {
+          value: "13 лет",
+          textHtml: "развиваем<br>рекламный рынок",
+        },
+        {
+          value: "17,38 %",
+          textHtml: "доля ООН-рынка<br>в&nbsp;РФ&nbsp;по&nbsp;данным Admetrix",
+        },
+      ],
+      image: {
+        src: "/images/dom-lenta-super-format-rim-audience/frame-2131328456.webp",
+        alt: "Рекламный экран РИМ на городской улице",
+        width: "1082",
+        height: "686",
+      },
+    },
+    superFormatAdvantages: {
+      label: "Преимущества",
+      titleHtml:
+        "Суперформат&nbsp;&mdash; сильный инструмент для&nbsp;построения имиджа, запуска продуктов и&nbsp;укрепления позиций бренда на&nbsp;рынке",
+      listAriaLabel: "Преимущества суперформата",
+      buttonText: "Оставить заявку",
+      image: {
+        src: "/images/dom-lenta-super-format-rim-advantages/frame-1.webp",
+        alt: "",
+        width: "856",
+        height: "988",
+      },
+      items: [
+        {
+          titleHtml: "Широкий охват",
+          descriptionHtml:
+            "Запоминаемость в&nbsp;3&ndash;5&nbsp;раз выше, чем у&nbsp;стандартных форматов",
+        },
+        {
+          titleHtml: "Буст имиджа",
+          descriptionHtml:
+            "Оперативно реагируйте на&nbsp;события и&nbsp;обновляйте креативы, усиливая актуальность коммуникации. Закрепите за&nbsp;собой образ лидера рынка",
+        },
+        {
+          titleHtml: "На виду 24/7",
+          descriptionHtml:
+            "Яркая динамичная картинка привлекает внимание днём и&nbsp;ночью, в&nbsp;любую погоду",
+        },
+        {
+          titleHtml: "Невозможно игнорировать",
+          descriptionHtml:
+            "В&nbsp;отличие от&nbsp;ТВ и&nbsp;интернет-рекламы, суперформат нельзя выключить, пролистать или заблокировать&nbsp;&mdash; он&nbsp;постоянно присутствует в&nbsp;городском пространстве и&nbsp;работает круглосуточно",
+        },
+      ],
+    },
+    superFormatOperator: {
+      titleHtml: "Один оператор&nbsp;&mdash;<br>охват всей России",
+      descriptionHtml:
+        "<p>Медиагруппа «РИМ»&nbsp;&mdash; официальный селлер медиафасадов федерального уровня. Работаем с&nbsp;лучшими поверхностями и&nbsp;запускаем кампании, которые становятся частью городской среды.</p><p>Экосистема бизнес-юнитов внутри группы позволяет закрывать весь цикл: от&nbsp;стратегии и&nbsp;креатива до&nbsp;медиапланирования и&nbsp;запуска кампаний любого масштаба</p>",
+      buttonText: "Все продукты для рекламы",
+    },
     superFormatBestScreens: {
       label: "Лучшие экраны",
       sliderAriaLabel: "Слайдер лучших экранов суперформата",
@@ -203,7 +264,88 @@ export default {
             height: "2304",
           },
         },
+        {
+          city: "Казань",
+          address: "ул. Фатыха Амирхана, 42а",
+          description: [
+            "Медиафасад расположен у регулируемого перекрёстка, в окружении торговых точек, авторынка и АЗС.",
+            "Низкая скорость потока и высокий трафик увеличивают время контакта с водителями и пешеходами.",
+          ],
+          statsAriaLabel:
+            "Характеристики экрана на улице Фатыха Амирхана, 42а",
+          stats: [
+            {
+              value: "20×14 м",
+              label: "Формат экрана",
+            },
+            {
+              value: "5 мин.",
+              label: "Рекламный блок",
+            },
+            {
+              value: "212,2",
+              label: "OTS",
+            },
+            {
+              value: "16,3",
+              label: "GRP",
+            },
+          ],
+          image: {
+            src: "/images/dom-lenta-super-format-rim-best-screens/background-5.webp",
+            alt: "",
+            width: "2224",
+            height: "1186",
+          },
+        },
+        {
+          city: "Ижевск",
+          address: "ул. Пушкинская, 165",
+          description: [
+            "Медиафасад расположен в окружении ключевых городских точек — бизнес-центра, жилого комплекса и других POI.",
+            "Такое соседство формирует стабильный поток автомобильной и пешеходной аудитории в течение всего дня.",
+          ],
+          statsAriaLabel: "Характеристики экрана на улице Пушкинская, 165",
+          stats: [
+            {
+              value: "16×23 м",
+              label: "Формат экрана",
+            },
+            {
+              value: "5 мин.",
+              label: "Рекламный блок",
+            },
+            {
+              value: "136,1",
+              label: "OTS",
+            },
+            {
+              value: "3,76",
+              label: "GRP",
+            },
+          ],
+          image: {
+            src: "/images/dom-lenta-super-format-rim-best-screens/background-6.webp",
+            alt: "",
+            width: "2224",
+            height: "1186",
+          },
+        },
       ],
+    },
+    feedbackForm: {
+      modifier: "super-format-rim",
+      label: "ФОРМА",
+      titleHtml:
+        "Супервозможности для вашего бизнеса&nbsp;&mdash;<br>размещайте рекламу и&nbsp;получайте самые<br>широкие охваты",
+      descriptionHtml:
+        "Оставьте заявку и&nbsp;мы&nbsp;бесплатно рассчитаем<br>стоимость размещения вашей рекламы",
+      formAriaLabel: "Форма заявки на подбор суперформата",
+      formAction: "/",
+      namePlaceholder: "[ Имя ]",
+      phonePlaceholder: "[ 8-000-000-000 ]",
+      buttonTextDesktop: "Отправить",
+      buttonTextMobile: "Оставить заявку",
     },
   },
 };

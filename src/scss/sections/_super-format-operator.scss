@@ -1,0 +1,58 @@
+.dom-lenta-super-format-operator {
+  margin-bottom: 15rem;
+}
+
+.dom-lenta-super-format-operator__inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: var(--dom-lenta-dark-blue-color);
+}
+
+.dom-lenta-super-format-operator__title {
+  width: 76.9rem;
+  color: var(--dom-lenta-orange-color);
+  font-size: 7rem;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.dom-lenta-super-format-operator__content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 54.2rem;
+}
+
+.dom-lenta-super-format-operator__description {
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.dom-lenta-super-format-operator__description p + p {
+  margin-top: 2.6rem;
+}
+
+.dom-lenta-super-format-operator__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 7.4rem;
+  padding: 2.3rem 2rem;
+  border-radius: 2rem;
+  color: #fff;
+  background-color: var(--dom-lenta-dark-blue-color);
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .dom-lenta-super-format-operator__button:hover {
+    background-color: #14234a;
+  }
+}

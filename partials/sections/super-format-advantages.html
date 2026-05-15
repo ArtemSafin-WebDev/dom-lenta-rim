@@ -1,0 +1,30 @@
+<section class="dom-lenta-super-format-advantages">
+  <div class="dom-lenta-container">
+    <div class="dom-lenta-super-format-advantages__header">
+      <p class="dom-lenta-super-format-advantages__label">{{superFormatAdvantages.label}}</p>
+
+      <h2 class="dom-lenta-super-format-advantages__title">{{{superFormatAdvantages.titleHtml}}}</h2>
+    </div>
+
+    <div class="dom-lenta-super-format-advantages__body">
+      <ol class="dom-lenta-super-format-advantages__list" aria-label="{{superFormatAdvantages.listAriaLabel}}">
+        {{#each superFormatAdvantages.items}}
+        <li class="dom-lenta-super-format-advantages__item">
+          <h3 class="dom-lenta-super-format-advantages__item-title">{{{this.titleHtml}}}</h3>
+          <p class="dom-lenta-super-format-advantages__item-description">{{{this.descriptionHtml}}}</p>
+        </li>
+        {{/each}}
+      </ol>
+
+      <div class="dom-lenta-super-format-advantages__media">
+        <img class="dom-lenta-super-format-advantages__image" src="{{superFormatAdvantages.image.src}}"
+          alt="{{superFormatAdvantages.image.alt}}" width="{{superFormatAdvantages.image.width}}"
+          height="{{superFormatAdvantages.image.height}}" loading="lazy" decoding="async" />
+
+        <button class="dom-lenta-super-format-advantages__button" type="button">
+          {{superFormatAdvantages.buttonText}}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

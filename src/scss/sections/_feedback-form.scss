@@ -274,3 +274,55 @@
     }
   }
 }
+
+.dom-lenta-feedback--super-format-rim {
+  .dom-lenta-feedback__inner {
+    max-width: 144rem;
+    margin-inline: auto;
+  }
+
+  .dom-lenta-feedback__header {
+    grid-template-columns: 31.3rem 94rem;
+    gap: 3rem;
+  }
+
+  .dom-lenta-feedback__header-content {
+    grid-column: 2;
+    max-width: 94rem;
+    gap: 5rem;
+  }
+
+  .dom-lenta-feedback__title {
+    font-size: 4.8rem;
+  }
+
+  .dom-lenta-feedback__description {
+    max-width: 54.6rem;
+  }
+
+  .dom-lenta-feedback__form {
+    grid-template-columns: 42.7rem 42.6rem 42.7rem;
+    gap: 3rem;
+    margin-top: 4rem;
+  }
+
+  @include mq.down(sm) {
+    .dom-lenta-feedback__header-content {
+      max-width: none;
+      gap: 3.5rem;
+    }
+
+    .dom-lenta-feedback__title {
+      font-size: 3.5rem;
+    }
+
+    .dom-lenta-feedback__description {
+      max-width: 24.2rem;
+    }
+
+    .dom-lenta-feedback__form {
+      gap: 1rem;
+      margin-top: 3.5rem;
+    }
+  }
+}
