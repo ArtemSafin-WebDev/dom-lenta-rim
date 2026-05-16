@@ -215,7 +215,13 @@
     padding-inline: 5.5rem;
   }
 
+  .dom-lenta-hero__logo {
+    display: none;
+  }
+
   @include mq.down(sm) {
+    margin-bottom: 15rem;
+
     .dom-lenta-hero__content {
       padding: 3rem 1.6rem 2.1rem;
       gap: 1.3rem;
@@ -232,9 +238,23 @@
       font-size: 1.6rem;
     }
 
+    .dom-lenta-hero__note {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
     .dom-lenta-hero__button {
       min-width: 18.3rem;
+      min-height: 3.9rem;
       padding: 0.9rem 2rem;
+    }
+
+    .dom-lenta-hero__logo {
+      display: block;
+      top: calc(100% + 5rem);
+      right: auto;
+      bottom: auto;
+      left: 1.2rem;
+      width: 26rem;
     }
   }
 }

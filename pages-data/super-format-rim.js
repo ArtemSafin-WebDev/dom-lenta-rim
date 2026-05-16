@@ -10,8 +10,12 @@ export default {
       buttonText: "Оставить заявку",
       image: {
         desktopSrc: "/images/dom-lenta-super-format-rim-hero/desktop.webp",
-        mobileSrc: "/images/dom-lenta-super-format-rim-hero/desktop.webp",
+        mobileSrc: "/images/dom-lenta-super-format-rim-hero/mobile.webp",
         alt: "",
+      },
+      logo: {
+        src: "/images/dom-lenta-super-format-rim-hero/logo.svg",
+        alt: "Суперформат.РФ",
       },
     },
     superFormatProduct: {
