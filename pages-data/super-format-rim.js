@@ -62,7 +62,7 @@ export default {
       stats: [
         {
           value: "13 лет",
-          textHtml: "развиваем<br>рекламный рынок",
+          textHtml: "развиваем <br>рекламный рынок",
         },
         {
           value: "17,38 %",
@@ -71,6 +71,7 @@ export default {
       ],
       image: {
         src: "/images/dom-lenta-super-format-rim-audience/frame-2131328456.webp",
+        mobileSrc: "/images/dom-lenta-super-format-rim-audience/mobile.webp",
         alt: "Рекламный экран РИМ на городской улице",
         width: "1082",
         height: "686",
@@ -147,11 +148,12 @@ export default {
     superFormatAdvantages: {
       label: "Преимущества",
       titleHtml:
-        "Суперформат&nbsp;&mdash; сильный инструмент для&nbsp;построения имиджа, запуска продуктов и&nbsp;укрепления позиций бренда на&nbsp;рынке",
+        "Суперформат &mdash; сильный инструмент для построения имиджа, запуска продуктов и укрепления позиций бренда на рынке",
       listAriaLabel: "Преимущества суперформата",
       buttonText: "Оставить заявку",
       image: {
         src: "/images/dom-lenta-super-format-rim-advantages/frame-1.webp",
+        mobileSrc: "/images/dom-lenta-super-format-rim-advantages/mobile.webp",
         alt: "",
         width: "856",
         height: "988",
@@ -220,6 +222,8 @@ export default {
           ],
           image: {
             src: "/images/dom-lenta-super-format-rim-best-screens/background-1.webp",
+            mobileSrc:
+              "/images/dom-lenta-super-format-rim-best-screens/background-1-mobile.webp",
             alt: "",
             width: "2680",
             height: "1236",
@@ -257,6 +261,8 @@ export default {
           ],
           image: {
             src: "/images/dom-lenta-super-format-rim-best-screens/background-2.webp",
+            mobileSrc:
+              "/images/dom-lenta-super-format-rim-best-screens/background-2-mobile.webp",
             alt: "",
             width: "1920",
             height: "1080",
@@ -294,6 +300,8 @@ export default {
           ],
           image: {
             src: "/images/dom-lenta-super-format-rim-best-screens/background-3.webp",
+            mobileSrc:
+              "/images/dom-lenta-super-format-rim-best-screens/background-3-mobile.webp",
             alt: "",
             width: "4096",
             height: "2304",
@@ -327,6 +335,8 @@ export default {
           ],
           image: {
             src: "/images/dom-lenta-super-format-rim-best-screens/background-4.webp",
+            mobileSrc:
+              "/images/dom-lenta-super-format-rim-best-screens/background-4-mobile.webp",
             alt: "",
             width: "4096",
             height: "2304",
@@ -361,6 +371,8 @@ export default {
           ],
           image: {
             src: "/images/dom-lenta-super-format-rim-best-screens/background-5.webp",
+            mobileSrc:
+              "/images/dom-lenta-super-format-rim-best-screens/background-5-mobile.webp",
             alt: "",
             width: "2224",
             height: "1186",
@@ -394,6 +406,8 @@ export default {
           ],
           image: {
             src: "/images/dom-lenta-super-format-rim-best-screens/background-6.webp",
+            mobileSrc:
+              "/images/dom-lenta-super-format-rim-best-screens/background-6-mobile.webp",
             alt: "",
             width: "2224",
             height: "1186",
@@ -413,7 +427,7 @@ export default {
       namePlaceholder: "[ Имя ]",
       phonePlaceholder: "[ 8-000-000-000 ]",
       buttonTextDesktop: "Отправить",
-      buttonTextMobile: "Оставить заявку",
+      buttonTextMobile: "Отправить",
     },
   },
 };

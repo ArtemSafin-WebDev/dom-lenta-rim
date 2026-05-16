@@ -307,13 +307,24 @@
   }
 
   @include mq.down(sm) {
+    .dom-lenta-feedback__label {
+      display: none;
+    }
+
+    .dom-lenta-feedback__inner {
+      margin-inline: var(--dom-lenta-container-padding);
+      padding: 1.853rem 0 1.8rem;
+    }
+
     .dom-lenta-feedback__header-content {
       max-width: none;
       gap: 3.5rem;
+      padding-top: 0;
     }
 
     .dom-lenta-feedback__title {
-      font-size: 3.5rem;
+      max-width: 30.6rem;
+      font-size: 3rem;
     }
 
     .dom-lenta-feedback__description {
@@ -323,6 +334,10 @@
     .dom-lenta-feedback__form {
       gap: 1rem;
       margin-top: 3.5rem;
+    }
+
+    .dom-lenta-feedback__submit {
+      width: 18.3rem;
     }
   }
 }

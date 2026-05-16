@@ -19,7 +19,8 @@
   @include mq.down(sm) {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.2rem;
+    padding-top: 0.7rem;
     margin-bottom: 2.5rem;
   }
 }
@@ -35,6 +36,8 @@
     margin-left: auto;
     font-size: 1rem;
     text-align: right;
+    text-box-edge: cap alphabetic;
+    text-box-trim: trim-both;
   }
 }
 
@@ -47,7 +50,9 @@
 
   @include mq.down(sm) {
     max-width: none;
-    font-size: 3.5rem;
+    font-size: 3rem;
+    text-box-edge: cap alphabetic;
+    text-box-trim: trim-both;
   }
 }
 
@@ -84,6 +89,7 @@
   column-gap: 1.7rem;
   row-gap: 4rem;
   align-items: start;
+  align-content: start;
   color: var(--dom-lenta-dark-blue-color);
 
   &::before {
@@ -97,11 +103,13 @@
   }
 
   @include mq.down(sm) {
-    grid-template-columns: 6.5rem minmax(0, 1fr);
+    grid-template-columns: 7rem minmax(0, 1fr);
     row-gap: 1.5rem;
 
     &::before {
       font-size: 1.6rem;
+      text-box-edge: cap alphabetic;
+      text-box-trim: trim-both;
     }
   }
 }
@@ -113,6 +121,8 @@
 
   @include mq.down(sm) {
     font-size: 1.6rem;
+    text-box-edge: cap alphabetic;
+    text-box-trim: trim-both;
   }
 }
 
@@ -126,6 +136,8 @@
   @include mq.down(sm) {
     max-width: none;
     font-size: 1.6rem;
+    text-box-edge: cap alphabetic;
+    text-box-trim: trim-both;
   }
 }
 
@@ -143,8 +155,21 @@
   }
 
   @include mq.down(sm) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    overflow: visible;
     border-radius: 1.5rem;
+    background-color: transparent;
+
+    &::before {
+      content: none;
+    }
   }
+}
+
+.dom-lenta-super-format-advantages__picture {
+  display: contents;
 }
 
 .dom-lenta-super-format-advantages__image {
@@ -155,6 +180,15 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+
+  @include mq.down(sm) {
+    position: static;
+    width: calc(100% - 0.3rem);
+    height: auto;
+    margin-left: 0.3rem;
+    aspect-ratio: 333 / 338;
+    border-radius: 1.5rem;
+  }
 }
 
 .dom-lenta-super-format-advantages__button {
@@ -176,10 +210,14 @@
   text-transform: uppercase;
 
   @include mq.down(sm) {
-    min-height: 5.2rem;
+    position: static;
+    width: 100%;
+    min-height: 5.8rem;
     padding: 1.8rem 2rem;
     border-radius: 1.5rem;
     font-size: 1.6rem;
+    text-box-edge: cap alphabetic;
+    text-box-trim: trim-both;
   }
 }
 

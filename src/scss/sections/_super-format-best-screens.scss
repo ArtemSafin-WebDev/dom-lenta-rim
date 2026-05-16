@@ -35,7 +35,10 @@
 }
 
 .dom-lenta-super-format-best-screens__wrapper {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: var(--dom-lenta-best-screen-card-height);
+  justify-items: center;
   overflow: visible;
   width: 100%;
   height: var(--dom-lenta-best-screen-card-height);
@@ -45,14 +48,12 @@
   --dom-lenta-best-screen-slide-scale: var(--dom-lenta-best-screen-side-scale);
   --dom-lenta-best-screen-slide-shift: 0rem;
 
-  position: absolute;
-  top: 0;
-  left: 50%;
+  position: relative;
+  grid-area: 1 / 1 / -1 / -1;
   z-index: 1;
   overflow: hidden;
   width: var(--dom-lenta-best-screen-card-width);
   height: var(--dom-lenta-best-screen-card-height);
-  margin-left: calc(var(--dom-lenta-best-screen-card-width) / -2);
   border-radius: 2.822rem;
   background-color: #4c4c4c;
   opacity: 0.8;
@@ -117,17 +118,31 @@
   );
 }
 
-.dom-lenta-super-format-best-screens__image {
+.dom-lenta-super-format-best-screens__bg-picture {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 0;
   width: 100%;
   height: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.dom-lenta-super-format-best-screens__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
   pointer-events: none;
   user-select: none;
+}
+
+.dom-lenta-super-format-best-screens__preview {
+  display: none;
 }
 
 .dom-lenta-super-format-best-screens__content {
@@ -273,83 +288,210 @@
   }
 
   .dom-lenta-super-format-best-screens__label {
-    margin-bottom: 2.5rem;
-    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    text-align: right;
   }
 
   .dom-lenta-super-format-best-screens__slider {
-    --dom-lenta-best-screen-card-width: 33.7rem;
-    --dom-lenta-best-screen-card-height: 18rem;
-    --dom-lenta-best-screen-side-scale: 0.779;
-    --dom-lenta-best-screen-side-shift: 30.85rem;
+    --dom-lenta-best-screen-card-width: 26.6rem;
+    --dom-lenta-best-screen-card-height: 55.2rem;
+    --dom-lenta-best-screen-side-scale: 1;
+    --dom-lenta-best-screen-side-shift: 27.3rem;
     --dom-lenta-best-screen-gap: 1rem;
   }
 
+  .dom-lenta-super-format-best-screens__wrapper {
+    grid-template-rows:
+      [card-start] 2rem
+      [header] auto
+      [header-gap] 1.7rem
+      [description] minmax(11.5rem, auto)
+      [description-gap] 1.2rem
+      [preview] auto
+      [preview-gap] 1.3rem
+      [stats] auto
+      [card-end] 2.9rem;
+    height: auto;
+    min-height: var(--dom-lenta-best-screen-card-height);
+  }
+
   .dom-lenta-super-format-best-screens__slide {
-    border-radius: 1.5rem;
+    --dom-lenta-best-screen-card-padding: 1.5rem;
+
+    display: grid;
+    grid-template-columns:
+      var(--dom-lenta-best-screen-card-padding)
+      [content] minmax(0, 1fr)
+      var(--dom-lenta-best-screen-card-padding);
+    grid-template-rows:
+      [card-start] 2rem
+      [header] auto
+      [header-gap] 1.7rem
+      [description] minmax(11.5rem, auto)
+      [description-gap] 1.2rem
+      [preview] auto
+      [preview-gap] 1.3rem
+      [stats] auto
+      [card-end] 2.9rem;
+    height: auto;
+    min-height: var(--dom-lenta-best-screen-card-height);
+    border-radius: 1.6477rem;
+    background-color: var(--dom-lenta-dark-blue-color);
   }
 
-  .dom-lenta-super-format-best-screens__content {
-    inset: 2rem 1.5rem 1.5rem;
+  @supports (grid-template-rows: subgrid) {
+    .dom-lenta-super-format-best-screens__slide {
+      grid-template-rows: subgrid;
+    }
   }
 
-  .dom-lenta-super-format-best-screens__text {
-    width: 21rem;
+  .dom-lenta-super-format-best-screens__slide::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    pointer-events: none;
   }
 
-  .dom-lenta-super-format-best-screens__city {
-    margin-bottom: 0.6rem;
-    font-size: 3.2rem;
+  .dom-lenta-super-format-best-screens__image {
+    filter: blur(1.2rem);
+    transform: scale(1.2);
   }
 
-  .dom-lenta-super-format-best-screens__address {
-    margin-bottom: 1.4rem;
-    font-size: 1.2rem;
-  }
-
-  .dom-lenta-super-format-best-screens__description {
-    gap: 0.8rem;
-    font-size: 1rem;
-  }
-
-  .dom-lenta-super-format-best-screens__stats {
+  .dom-lenta-super-format-best-screens__preview {
+    grid-column: content;
+    grid-row: preview;
+    z-index: 3;
+    display: block;
+    aspect-ratio: 117 / 79;
+    border-radius: 0.8528rem;
     overflow: hidden;
   }
 
+  .dom-lenta-super-format-best-screens__preview-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .dom-lenta-super-format-best-screens__content {
+    display: contents;
+    position: static;
+    inset: auto;
+  }
+
+  .dom-lenta-super-format-best-screens__text {
+    display: contents;
+  }
+
+  .dom-lenta-super-format-best-screens__header {
+    grid-column: content;
+    grid-row: header;
+    z-index: 3;
+  }
+
+  .dom-lenta-super-format-best-screens__city {
+    margin-bottom: 0;
+    font-size: 3rem;
+  }
+
+  .dom-lenta-super-format-best-screens__address {
+    margin-top: 0.9rem;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  .dom-lenta-super-format-best-screens__description {
+    grid-column: content;
+    grid-row: description;
+    z-index: 3;
+    align-self: start;
+    gap: 1.3rem;
+    font-size: 1.2rem;
+    line-height: 1.1;
+  }
+
+  .dom-lenta-super-format-best-screens__stats {
+    grid-column: content;
+    grid-row: stats;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-self: start;
+    overflow: visible;
+  }
+
   .dom-lenta-super-format-best-screens__stat {
-    gap: 0.6rem;
-    padding-inline: 1rem;
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 1.5rem;
+    min-width: 0;
+    min-height: 2.7rem;
+    padding: 0.6rem 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .dom-lenta-super-format-best-screens__stat:first-child {
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  .dom-lenta-super-format-best-screens__stat:last-child {
+    padding-right: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .dom-lenta-super-format-best-screens__stat-value,
+  .dom-lenta-super-format-best-screens__stat-label {
+    font-size: 1.2rem;
+    line-height: 1;
   }
 
   .dom-lenta-super-format-best-screens__stat-value {
-    font-size: 1.8rem;
+    grid-column: 2;
+    grid-row: 1;
+    text-align: right;
   }
 
   .dom-lenta-super-format-best-screens__stat-label {
-    font-size: 1rem;
+    grid-column: 1;
+    grid-row: 1;
+    white-space: normal;
   }
 
   .dom-lenta-super-format-best-screens__nav {
-    width: 4rem;
+    width: 3.7561rem;
   }
 
   .dom-lenta-super-format-best-screens__nav-icon {
-    width: 1rem;
-    height: 1.75rem;
+    width: 0.9rem;
+    height: 1.6rem;
   }
 
   .dom-lenta-super-format-best-screens__nav--prev {
-    left: calc(50% - (var(--dom-lenta-best-screen-card-width) / 2) - 2rem);
+    left: 1.9rem;
   }
 
   .dom-lenta-super-format-best-screens__nav--next {
-    right: calc(50% - (var(--dom-lenta-best-screen-card-width) / 2) - 2rem);
+    right: 1.8rem;
   }
 
   .dom-lenta-super-format-best-screens__button {
-    width: 26rem;
-    margin-top: 2.5rem;
-    padding: 1.7rem 2rem;
+    width: 33.7rem;
+    margin-top: 1rem;
+    padding: 2.1rem 2rem;
     border-radius: 1.5rem;
     font-size: 1.6rem;
   }

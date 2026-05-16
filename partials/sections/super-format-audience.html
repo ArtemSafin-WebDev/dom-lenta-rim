@@ -11,9 +11,12 @@
       </ul>
 
       <article class="dom-lenta-super-format-audience__card">
-        <img class="dom-lenta-super-format-audience__image" src="{{superFormatAudience.image.src}}"
-          alt="{{superFormatAudience.image.alt}}" width="{{superFormatAudience.image.width}}"
-          height="{{superFormatAudience.image.height}}" loading="lazy" decoding="async" />
+        <picture class="dom-lenta-super-format-audience__picture">
+          <source media="(max-width: 576px)" srcset="{{superFormatAudience.image.mobileSrc}}" />
+          <img class="dom-lenta-super-format-audience__image" src="{{superFormatAudience.image.src}}"
+            alt="{{superFormatAudience.image.alt}}" width="{{superFormatAudience.image.width}}"
+            height="{{superFormatAudience.image.height}}" loading="lazy" decoding="async" />
+        </picture>
 
         <button class="dom-lenta-super-format-audience__button" type="button">
           {{superFormatAudience.buttonText}}

@@ -17,9 +17,15 @@
       </ol>
 
       <div class="dom-lenta-super-format-advantages__media">
-        <img class="dom-lenta-super-format-advantages__image" src="{{superFormatAdvantages.image.src}}"
-          alt="{{superFormatAdvantages.image.alt}}" width="{{superFormatAdvantages.image.width}}"
-          height="{{superFormatAdvantages.image.height}}" loading="lazy" decoding="async" />
+        <picture class="dom-lenta-super-format-advantages__picture">
+          {{#if superFormatAdvantages.image.mobileSrc}}
+          <source media="(max-width: 576px)" srcset="{{superFormatAdvantages.image.mobileSrc}}" />
+          {{/if}}
+
+          <img class="dom-lenta-super-format-advantages__image" src="{{superFormatAdvantages.image.src}}"
+            alt="{{superFormatAdvantages.image.alt}}" width="{{superFormatAdvantages.image.width}}"
+            height="{{superFormatAdvantages.image.height}}" loading="lazy" decoding="async" />
+        </picture>
 
         <button class="dom-lenta-super-format-advantages__button" type="button">
           {{superFormatAdvantages.buttonText}}

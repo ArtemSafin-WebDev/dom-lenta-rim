@@ -71,12 +71,13 @@
   @include mq.down(sm) {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 2rem;
 
     & + & {
       margin-top: 2.5rem;
       padding-top: 2.5rem;
-      border-top: 1px solid rgba(30, 30, 30, 0.75);
+      border-top: 1px solid #1e1e1e;
     }
   }
 }
@@ -90,7 +91,7 @@
   white-space: nowrap;
 
   @include mq.down(sm) {
-    font-size: 8.8rem;
+    font-size: 9rem;
     line-height: 0.72;
   }
 }
@@ -118,8 +119,18 @@
   background-color: #4c4c4c;
 
   @include mq.down(sm) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    overflow: visible;
+    aspect-ratio: auto;
     border-radius: 1.5rem;
+    background-color: transparent;
   }
+}
+
+.dom-lenta-super-format-audience__picture {
+  display: block;
 }
 
 .dom-lenta-super-format-audience__image {
@@ -130,6 +141,14 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+
+  @include mq.down(sm) {
+    position: static;
+    width: calc(100% - 0.3rem);
+    aspect-ratio: 333 / 338;
+    margin-left: 0.3rem;
+    border-radius: 1.5rem;
+  }
 }
 
 .dom-lenta-super-format-audience__button {
@@ -152,6 +171,8 @@
   text-transform: uppercase;
 
   @include mq.down(sm) {
+    position: static;
+    width: 100%;
     min-height: 5.8rem;
     padding: 1.9rem 2rem;
     border-radius: 1.5rem;

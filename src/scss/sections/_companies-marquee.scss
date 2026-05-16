@@ -1,8 +1,14 @@
+@use "../tools/media" as mq;
+
 .dom-lenta-companies-marquee {
   --dom-lenta-companies-marquee-gap: 5rem;
 
   overflow: hidden;
   margin-bottom: 15rem;
+
+  @include mq.down(sm) {
+    margin-bottom: 5rem;
+  }
 }
 
 .dom-lenta-companies-marquee__viewport {
@@ -30,6 +36,10 @@
   flex: 0 0 auto;
   width: auto;
   height: 13.8rem;
+
+  @include mq.down(sm) {
+    height: 6.5rem;
+  }
 }
 
 @keyframes dom-lenta-companies-marquee {

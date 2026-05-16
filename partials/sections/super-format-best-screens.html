@@ -8,13 +8,20 @@
     <div class="dom-lenta-super-format-best-screens__wrapper">
       {{#each superFormatBestScreens.slides}}
       <article class="dom-lenta-super-format-best-screens__slide">
-        <img class="dom-lenta-super-format-best-screens__image" src="{{this.image.src}}" alt="{{this.image.alt}}"
-          width="{{this.image.width}}" height="{{this.image.height}}" loading="lazy" decoding="async" />
+        <picture class="dom-lenta-super-format-best-screens__bg-picture">
+          {{#if this.image.mobileSrc}}
+          <source media="(max-width: 576px)" srcset="{{this.image.mobileSrc}}" />
+          {{/if}}
+          <img class="dom-lenta-super-format-best-screens__image" src="{{this.image.src}}" alt="{{this.image.alt}}"
+            width="{{this.image.width}}" height="{{this.image.height}}" loading="lazy" decoding="async" />
+        </picture>
 
         <div class="dom-lenta-super-format-best-screens__content">
           <div class="dom-lenta-super-format-best-screens__text">
-            <h2 class="dom-lenta-super-format-best-screens__city">{{this.city}}</h2>
-            <p class="dom-lenta-super-format-best-screens__address">/{{this.address}}</p>
+            <div class="dom-lenta-super-format-best-screens__header">
+              <h2 class="dom-lenta-super-format-best-screens__city">{{this.city}}</h2>
+              <p class="dom-lenta-super-format-best-screens__address">/{{this.address}}</p>
+            </div>
 
             <div class="dom-lenta-super-format-best-screens__description">
               {{#each this.description}}
@@ -22,6 +29,14 @@
               {{/each}}
             </div>
           </div>
+
+          <picture class="dom-lenta-super-format-best-screens__preview">
+            {{#if this.image.mobileSrc}}
+            <source media="(max-width: 576px)" srcset="{{this.image.mobileSrc}}" />
+            {{/if}}
+            <img class="dom-lenta-super-format-best-screens__preview-image" src="{{this.image.src}}" alt=""
+              width="{{this.image.width}}" height="{{this.image.height}}" loading="lazy" decoding="async" />
+          </picture>
 
           <ul class="dom-lenta-super-format-best-screens__stats" aria-label="{{this.statsAriaLabel}}">
             {{#each this.stats}}
