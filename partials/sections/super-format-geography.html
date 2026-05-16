@@ -4,7 +4,8 @@
       <h2 class="dom-lenta-super-format-geography__title">{{superFormatGeography.title}}</h2>
 
       <div class="dom-lenta-super-format-geography__body">
-        <ol class="dom-lenta-super-format-geography__stats" aria-label="{{superFormatGeography.statsAriaLabel}}">
+        <ol class="dom-lenta-super-format-geography__stats dom-lenta-super-format-geography__stats--desktop"
+          aria-label="{{superFormatGeography.statsAriaLabel}}">
           {{#each superFormatGeography.stats}}
           <li class="dom-lenta-super-format-geography__stat">
             <p class="dom-lenta-super-format-geography__stat-value">{{this.value}}</p>
@@ -14,9 +15,25 @@
         </ol>
 
         <div class="dom-lenta-super-format-geography__map">
-          <img class="dom-lenta-super-format-geography__map-image" src="{{superFormatGeography.map.src}}"
-            alt="{{superFormatGeography.map.alt}}" width="3706" height="1990" loading="lazy" decoding="async" />
+          <picture class="dom-lenta-super-format-geography__map-picture">
+            {{#if superFormatGeography.map.mobileSrc}}
+            <source media="(max-width: 576px)" srcset="{{superFormatGeography.map.mobileSrc}}" />
+            {{/if}}
+            <img class="dom-lenta-super-format-geography__map-image" src="{{superFormatGeography.map.src}}"
+              alt="{{superFormatGeography.map.alt}}" width="3706" height="1990" loading="lazy" decoding="async" />
+          </picture>
         </div>
+
+        {{#if superFormatGeography.mobileStats}}
+        <ol class="dom-lenta-super-format-geography__mobile-stats" aria-label="{{superFormatGeography.statsAriaLabel}}">
+          {{#each superFormatGeography.mobileStats}}
+          <li class="dom-lenta-super-format-geography__mobile-stat">
+            <p class="dom-lenta-super-format-geography__mobile-stat-value">{{this.value}}</p>
+            <p class="dom-lenta-super-format-geography__mobile-stat-text">{{this.text}}</p>
+          </li>
+          {{/each}}
+        </ol>
+        {{/if}}
       </div>
 
       <div class="dom-lenta-super-format-geography__cta">

@@ -1,3 +1,5 @@
+@use "../tools/media" as mq;
+
 .dom-lenta-super-format-request {
   margin-bottom: 24rem;
 }
@@ -14,17 +16,26 @@
   background-color: #4c4c4c;
 }
 
-.dom-lenta-super-format-request__image {
+.dom-lenta-super-format-request__picture {
   position: absolute;
   z-index: -1;
   top: 0;
   left: 0;
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   pointer-events: none;
   user-select: none;
+}
+
+.dom-lenta-super-format-request__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .dom-lenta-super-format-request__form {
@@ -88,6 +99,10 @@
   cursor: not-allowed;
 }
 
+.dom-lenta-super-format-request__submit--mobile {
+  display: none;
+}
+
 .dom-lenta-super-format-request .validation-error {
   color: #fff;
   font-size: 1.4rem;
@@ -97,5 +112,45 @@
 @media (hover: hover) and (pointer: fine) {
   .dom-lenta-super-format-request__submit:hover:not(:disabled) {
     background-color: #cc4121;
+  }
+}
+
+@include mq.down(sm) {
+  .dom-lenta-super-format-request {
+    margin-bottom: 5rem;
+  }
+
+  .dom-lenta-super-format-request__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: calc(100% - (var(--dom-lenta-container-padding) * 2));
+    max-width: 33.7rem;
+    aspect-ratio: auto;
+    overflow: visible;
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  .dom-lenta-super-format-request__picture {
+    position: static;
+    width: 100%;
+    height: 18rem;
+    overflow: clip;
+    border-radius: 1.5rem;
+    pointer-events: auto;
+    user-select: auto;
+  }
+
+  .dom-lenta-super-format-request__form {
+    display: none;
+  }
+
+  .dom-lenta-super-format-request__submit--mobile {
+    display: flex;
+    min-height: 5.8rem;
+    padding: 1.9rem 2rem;
+    border-radius: 1.5rem;
+    font-size: 1.6rem;
   }
 }

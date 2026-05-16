@@ -1,7 +1,12 @@
 <section class="dom-lenta-super-format-request">
   <div class="dom-lenta-super-format-request__inner">
-    <img class="dom-lenta-super-format-request__image" src="{{superFormatRequest.image.src}}"
-      alt="{{superFormatRequest.image.alt}}" width="2880" height="832" loading="lazy" decoding="async" />
+    <picture class="dom-lenta-super-format-request__picture">
+      {{#if superFormatRequest.image.mobileSrc}}
+      <source media="(max-width: 576px)" srcset="{{superFormatRequest.image.mobileSrc}}" />
+      {{/if}}
+      <img class="dom-lenta-super-format-request__image" src="{{superFormatRequest.image.src}}"
+        alt="{{superFormatRequest.image.alt}}" width="2880" height="832" loading="lazy" decoding="async" />
+    </picture>
 
     <form class="dom-lenta-super-format-request__form js-form" action="{{superFormatRequest.formAction}}" method="post"
       aria-label="{{superFormatRequest.formAriaLabel}}">
@@ -25,5 +30,9 @@
         {{superFormatRequest.buttonText}}
       </button>
     </form>
+
+    <button class="dom-lenta-super-format-request__submit dom-lenta-super-format-request__submit--mobile" type="button">
+      {{superFormatRequest.buttonText}}
+    </button>
   </div>
 </section>

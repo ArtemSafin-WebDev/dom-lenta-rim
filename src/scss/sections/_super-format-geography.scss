@@ -34,6 +34,10 @@
   gap: 5rem;
 }
 
+.dom-lenta-super-format-geography__mobile-stats {
+  display: none;
+}
+
 .dom-lenta-super-format-geography__stat {
   display: flex;
   flex-direction: column;
@@ -65,6 +69,10 @@
   width: max-content;
   max-width: none;
   margin-top: -24rem;
+}
+
+.dom-lenta-super-format-geography__map-picture {
+  display: block;
 }
 
 .dom-lenta-super-format-geography__map-image {
@@ -142,38 +150,96 @@
   }
 
   .dom-lenta-super-format-geography__title {
-    margin-bottom: 5rem;
-    font-size: 3.5rem;
+    position: relative;
+    z-index: 1;
+    max-width: 20rem;
+    margin-bottom: -4.8rem;
+    font-size: 3rem;
   }
 
   .dom-lenta-super-format-geography__body {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
     align-items: stretch;
     margin-bottom: 5rem;
   }
 
-  .dom-lenta-super-format-geography__stats {
-    gap: 2.5rem;
+  .dom-lenta-super-format-geography__stats--desktop {
+    display: none;
   }
 
-  .dom-lenta-super-format-geography__stat {
-    gap: 1.2rem;
+  .dom-lenta-super-format-geography__mobile-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: -4.7rem;
+  }
+
+  .dom-lenta-super-format-geography__mobile-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     padding-bottom: 2.5rem;
+    border-bottom: 1px solid #1e1e1e;
   }
 
-  .dom-lenta-super-format-geography__stat-value {
-    font-size: 6.4rem;
+  .dom-lenta-super-format-geography__mobile-stat:first-child,
+  .dom-lenta-super-format-geography__mobile-stat:last-child {
+    grid-column: 1 / -1;
   }
 
-  .dom-lenta-super-format-geography__stat-text {
-    font-size: 1.8rem;
+  .dom-lenta-super-format-geography__mobile-stat:first-child {
+    padding-bottom: 2rem;
+  }
+
+  .dom-lenta-super-format-geography__mobile-stat:nth-child(2),
+  .dom-lenta-super-format-geography__mobile-stat:nth-child(3) {
+    padding-top: 2.5rem;
+  }
+
+  .dom-lenta-super-format-geography__mobile-stat:nth-child(2) {
+    position: relative;
+  }
+
+  .dom-lenta-super-format-geography__mobile-stat:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    top: 2.5rem;
+    right: 0;
+    width: 1px;
+    height: 10.7rem;
+    background-color: #1e1e1e;
+  }
+
+  .dom-lenta-super-format-geography__mobile-stat:nth-child(3) {
+    padding-left: 4rem;
+  }
+
+  .dom-lenta-super-format-geography__mobile-stat:last-child {
+    gap: 2rem;
+    padding-top: 2.5rem;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .dom-lenta-super-format-geography__mobile-stat-value {
+    font-size: 9rem;
+    font-weight: 700;
+    line-height: 0.72;
+    text-transform: uppercase;
+    color: var(--dom-lenta-orange-color);
+  }
+
+  .dom-lenta-super-format-geography__mobile-stat-text {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.1;
   }
 
   .dom-lenta-super-format-geography__map {
-    width: 100%;
-    max-width: 100%;
+    order: -1;
+    width: calc(100vw - var(--dom-lenta-container-padding));
+    max-width: none;
+    margin-top: 0;
   }
 
   .dom-lenta-super-format-geography__map-image {
@@ -185,7 +251,7 @@
   .dom-lenta-super-format-geography__cta {
     display: flex;
     flex-direction: column;
-    gap: 3.5rem;
+    gap: 2.5rem;
     align-items: flex-start;
     padding: 1.9rem 1.5rem;
     border-radius: 1.648rem;
@@ -193,7 +259,7 @@
 
   .dom-lenta-super-format-geography__cta::after {
     top: -22.1rem;
-    right: -21.2rem;
+    right: -22.35rem;
     width: 32.6rem;
   }
 

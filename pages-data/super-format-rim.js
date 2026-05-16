@@ -29,6 +29,7 @@ export default {
       buttonText: "Оставить заявку",
       image: {
         src: "/images/dom-lenta-super-format-rim-request/background.webp",
+        mobileSrc: "/images/dom-lenta-super-format-rim-request/mobile.webp",
         alt: "",
       },
     },
@@ -51,8 +52,27 @@ export default {
       ],
       map: {
         src: "/images/dom-lenta-super-format-rim-geography/map.webp",
+        mobileSrc: "/images/dom-lenta-super-format-rim-geography/map-mobile.svg",
         alt: "Карта географии присутствия суперформата",
       },
+      mobileStats: [
+        {
+          value: "50",
+          text: "Рекламных конструкций",
+        },
+        {
+          value: "17",
+          text: "Регионов",
+        },
+        {
+          value: "18",
+          text: "Городов",
+        },
+        {
+          value: "7 419,35",
+          text: "Суммарный OTS в сутки",
+        },
+      ],
       ctaText: "Узнайте о преимуществах локаций каждого экрана!",
       buttonText: "Подробнее",
     },
