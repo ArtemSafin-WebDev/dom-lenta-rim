@@ -1,5 +1,6 @@
 import Swiper from "swiper";
 import { Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -16,9 +17,13 @@ class SuperFormatSlider extends Component {
     );
 
     this.swiper = new Swiper(this.element, {
-      modules: [Pagination],
+      modules: [Pagination, Autoplay],
       slidesPerView: 1,
       speed: 600,
+        autoplay: {
+            delay: 2500, // Delay between transitions in ms (default is 3000)
+            disableOnInteraction: false, // Continue autoplay after user interaction
+        },
       pagination: pagination
         ? {
             el: pagination,
