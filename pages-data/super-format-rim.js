@@ -76,6 +76,74 @@ export default {
         height: "686",
       },
     },
+    companiesMarquee: {
+      ariaLabel: "Логотипы клиентов и партнеров",
+      items: [
+        {
+          src: "/images/dom-lenta-companies/1.svg",
+        },
+        {
+          src: "/images/dom-lenta-companies/2.svg",
+        },
+        {
+          src: "/images/dom-lenta-companies/3.svg",
+        },
+        {
+          src: "/images/dom-lenta-companies/4.svg",
+        },
+        {
+          src: "/images/dom-lenta-companies/5.svg",
+        },
+        {
+          src: "/images/dom-lenta-companies/6.svg",
+        },
+        {
+          src: "/images/dom-lenta-companies/7.svg",
+        },
+        {
+          src: "/images/dom-lenta-companies/8.svg",
+        },
+        {
+          src: "/images/dom-lenta-companies/9.svg",
+        },
+        {
+          src: "/images/dom-lenta-companies/10.svg",
+        },
+        {
+          src: "/images/dom-lenta-companies/11.svg",
+        },
+        {
+          src: "/images/dom-lenta-companies/12.svg",
+        },
+        {
+          src: "/images/dom-lenta-companies/13.svg",
+        },
+        {
+          src: "/images/dom-lenta-companies/14.svg",
+        },
+        {
+          src: "/images/dom-lenta-companies/15.svg",
+        },
+        {
+          src: "/images/dom-lenta-companies/16.svg",
+        },
+        {
+          src: "/images/dom-lenta-companies/17.svg",
+        },
+        {
+          src: "/images/dom-lenta-companies/18.svg",
+        },
+        {
+          src: "/images/dom-lenta-companies/19.svg",
+        },
+        {
+          src: "/images/dom-lenta-companies/20.svg",
+        },
+        {
+          src: "/images/dom-lenta-companies/21.svg",
+        },
+      ],
+    },
     superFormatAdvantages: {
       label: "Преимущества",
       titleHtml:

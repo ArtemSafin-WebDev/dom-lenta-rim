@@ -1,0 +1,49 @@
+.dom-lenta-companies-marquee {
+  --dom-lenta-companies-marquee-gap: 5rem;
+
+  overflow: hidden;
+  margin-bottom: 15rem;
+}
+
+.dom-lenta-companies-marquee__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.dom-lenta-companies-marquee__track {
+  display: flex;
+  gap: var(--dom-lenta-companies-marquee-gap);
+  width: max-content;
+  will-change: transform;
+  animation: dom-lenta-companies-marquee 50s linear infinite;
+}
+
+.dom-lenta-companies-marquee__group {
+  display: flex;
+  flex: 0 0 auto;
+  gap: var(--dom-lenta-companies-marquee-gap);
+  align-items: center;
+}
+
+.dom-lenta-companies-marquee__logo {
+  display: block;
+  flex: 0 0 auto;
+  width: auto;
+  height: 13.8rem;
+}
+
+@keyframes dom-lenta-companies-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - (var(--dom-lenta-companies-marquee-gap) / 2)));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dom-lenta-companies-marquee__track {
+    animation: none;
+  }
+}

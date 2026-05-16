@@ -1,0 +1,17 @@
+<section class="dom-lenta-companies-marquee" aria-label="{{companiesMarquee.ariaLabel}}">
+  <div class="dom-lenta-companies-marquee__viewport">
+    <div class="dom-lenta-companies-marquee__track" aria-hidden="true">
+      <div class="dom-lenta-companies-marquee__group">
+        {{#each companiesMarquee.items}}
+        <img class="dom-lenta-companies-marquee__logo" src="{{this.src}}" alt="" loading="lazy" decoding="async" />
+        {{/each}}
+      </div>
+
+      <div class="dom-lenta-companies-marquee__group">
+        {{#each companiesMarquee.items}}
+        <img class="dom-lenta-companies-marquee__logo" src="{{this.src}}" alt="" loading="lazy" decoding="async" />
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>
