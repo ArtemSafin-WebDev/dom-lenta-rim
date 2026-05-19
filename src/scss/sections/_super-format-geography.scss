@@ -45,6 +45,9 @@
   padding-bottom: 5rem;
   border-bottom: 1px solid rgba(30, 30, 30, 0.6);
 }
+.dom-lenta-super-format-geography__stat:before{
+  content: none;
+}
 
 .dom-lenta-super-format-geography__stat:last-child {
   padding-bottom: 0;
